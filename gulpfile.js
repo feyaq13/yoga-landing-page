@@ -10,8 +10,13 @@ function style () { // компилирует файл scss в css
   return gulp.src('./src/scss/**/*.scss')
     .pipe(sass()) // процесс компиляции
     .pipe(postcss([ autoprefixer() ]))
-    .pipe(gulp.dest('./src/dist')) // создает файл в './src'
+    .pipe(gulp.dest('./src/docs')) // создает файл в './src'
     .pipe(browserSync.stream()); // запускает browser-sync
+}
+
+function move () { // переносит файлы в неизменном виде в директорию для docs
+  gulp.src('./src/*.{html,js}').pipe(gulp.dest('./src/docs'))
+  gulp.src('./src/images/*').pipe(gulp.dest('./src/docs/images'))
 }
 
 function watch () { // смотрит только за изменениями файлов
@@ -27,9 +32,12 @@ function watch () { // смотрит только за изменениями �
   gulp.watch('./src/*.html').on('change', browserSync.reload);
 }
 
+// todo сделать копировалку для index.html main.js и картинок в docs в неизменном виде
+
 exports.style = style;
 exports.watch = watch;
 
 style();
+move();
 
 // запуск 'gulp watch' через терминал или 'npm start'
