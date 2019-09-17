@@ -10,7 +10,7 @@ function style () { // компилирует файл scss в css
   return gulp.src('./src/scss/**/*.scss')
     .pipe(sass()) // процесс компиляции
     .pipe(postcss([ autoprefixer() ]))
-    .pipe(gulp.dest('./src')) // создает файл в './src'
+    .pipe(gulp.dest('./src/dist')) // создает файл в './src'
     .pipe(browserSync.stream()); // запускает browser-sync
 }
 
@@ -21,7 +21,6 @@ function watch () { // смотрит только за изменениями �
     },
     online: true,
     tunnel: true,
-    logLevel: "debug"
   });
   gulp.watch('./src/scss/**/*.scss', style);
   gulp.watch('./src/*.js').on('change', browserSync.reload);
@@ -30,5 +29,7 @@ function watch () { // смотрит только за изменениями �
 
 exports.style = style;
 exports.watch = watch;
+
+style();
 
 // запуск 'gulp watch' через терминал или 'npm start'
