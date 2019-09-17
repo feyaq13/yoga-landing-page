@@ -1,0 +1,23 @@
+{
+  "name": "yoga-landing-page",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "start": "gulp watch"
+  },
+  "repository": {
+    "type": "git"
+  },
+  "author": "feyaq",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.0.2",
+    "gulp-postcss": "^8.0.0"
+  },
+  "dependencies": {
+    "autoprefixer": "^9.6.1",
+    "postcss-cli": "^6.1.3"
+  }
+}
