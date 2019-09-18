@@ -9,30 +9,30 @@ $font-caveat: 'Caveat', cursive;
 }
 // COMMON -->
 
-// <-- BACKGROUND PROJECT
-body {
+// <-- HEADER
+
+.wrapper-supportive-header-page {
   background-image: url(../images/header-bg.svg);
   background-repeat: no-repeat;
   background-position: 30% center;
   background-size: cover;
-  max-width: 1020px;
-  margin: 0 auto;
 }
-// BACKGROUND PROJECT -->
-
-// <-- HEADER
 
 .header-page {
   height: 100vh;
-  margin: 0 20px;
+  display: flex;
+  flex-direction: column;
+  max-width: 1020px;
+  margin: 0 auto;
 }
 
-.header__navigation {
+.header-page__navigation {
   display: flex;
   justify-content: space-between;
   padding: 10px;
   font-family: $font-montserrat;
   position: fixed;
+  z-index: 999;
   left: 0;
   right: 0;
   margin: 0 auto;
@@ -84,6 +84,10 @@ body {
   color: #fff;
 }
 
+.header-page__main-content {
+  transform: translate(0, -50%);
+}
+
 .main-headerings__h2 {
   font-family: $font-caveat;
   color: #8E80A9;
@@ -95,6 +99,7 @@ body {
   color: #fff;
   font-size: 18vw;
   text-align: center;
+  letter-spacing: 16px;
 }
 
 .btn-wrapper {
