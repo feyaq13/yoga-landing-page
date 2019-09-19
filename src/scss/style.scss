@@ -206,3 +206,70 @@ $font-caveat: 'Caveat', cursive;
   font-weight: 500;
   margin-top: 20px;
 }
+
+// <-- SECTION TICKETS
+
+.wrapper-supportive-section-season-tickets {
+  background-image: url(../images/block-tickets-sky-pattern-big.svg);
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: 25%;
+  background-size: cover;
+  //height: auto;
+}
+
+.section-season-tickets__tickets {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.tickets__ticket {
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0 0 5px 0 #e5e5e5;
+  margin: 0 30px 30px 30px;
+  padding: 20px 30px;
+  flex-basis: 400px;
+}
+
+.season-tickets__h2 {
+  text-align: center;
+  padding: 40px 0;
+}
+
+.ticket-desc > * {
+  font-family: $font-montserrat;
+  margin-bottom: 15px;
+}
+
+.ticket-desc {
+  font-family: $font-montserrat;
+}
+
+.ticket-desc > h3 {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.ticket__time {
+  color: $coral-color;
+  font-size: 14px;
+}
+
+.ticket-price {
+  color: $primary-color;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.btn-ticket {
+  padding: 20px 30px;
+  background: $primary-color;
+  border: none;
+  color: #fff;
+  font-family: $font-montserrat;
+  font-size: 14px;
+}
+
+// SECTION TICKETS -->
