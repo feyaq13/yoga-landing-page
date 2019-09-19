@@ -1,11 +1,28 @@
 // <-- COMMON
 $font-montserrat: 'Montserrat', sans-serif;
 $font-caveat: 'Caveat', cursive;
+$primary-color: #8E80A9;
+$coral-color: #E65C7B;
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  background-color: #FCF8FE;
+}
+
+h2 {
+  color: #8E80A9;
+  font-family: $font-montserrat;
+}
+
+h3 {
+  color: #8E80A9;
+  font-weight: 500;
+  font-family: $font-montserrat;
 }
 // COMMON -->
 
@@ -109,7 +126,7 @@ $font-caveat: 'Caveat', cursive;
 }
 
 .btn-text {
-  color: #E65C7B;
+  color: $coral-color;
   background: none;
   width: 200px;
   font-size: 12px;
@@ -117,7 +134,7 @@ $font-caveat: 'Caveat', cursive;
 }
 
 .btn-wrapper > button {
-  background: #E65C7B;
+  background: $coral-color;
   color: #fff;
   width: 30px;
   height: 26px;
@@ -144,8 +161,6 @@ $font-caveat: 'Caveat', cursive;
 .section-kinds-of-yoga__h2 {
   text-align: center;
   padding: 20px 0;
-  color: #8E80A9;
-  font-family: $font-montserrat;
 }
 
 @media (min-width: 768px) {
@@ -202,8 +217,6 @@ $font-caveat: 'Caveat', cursive;
 }
 
 .kind__desc > h3 {
-  color: #8E80A9;
-  font-weight: 500;
   margin-top: 20px;
 }
 
