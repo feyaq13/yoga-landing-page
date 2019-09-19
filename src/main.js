@@ -5,7 +5,7 @@ function setupMarginTop () {
 
 function setupInheritWidth () {
   const widthParent = document.querySelector('.header-page').offsetWidth + 'px'
-  const child = document.querySelector('.header__navigation')
+  const child = document.querySelector('.header-page__navigation')
   child.style.maxWidth = widthParent;
 }
 
@@ -19,7 +19,7 @@ function leaveHamburger () {
 
 function handlerMenu (e) {
   let target = e.target;
-  const navBar = document.querySelector('.header__navigation')
+  const navBar = document.querySelector('.header-page__navigation')
   const navList = document.querySelector('.navigation__list')
 
 
