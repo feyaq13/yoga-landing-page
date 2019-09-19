@@ -169,6 +169,10 @@ h3 {
     flex-wrap: wrap;
     justify-content: center;
   }
+
+  .kinds {
+    width: 100%;
+  }
 }
 
 .kinds {
@@ -202,8 +206,7 @@ h3 {
   padding: 10px;
   background: #8E80A9;
   border: none;
-  flex-grow: 0;
-  width: 100%;
+  flex-grow: 1;
 }
 
 .btn-kind-details__icon {
