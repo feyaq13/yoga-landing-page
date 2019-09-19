@@ -28,7 +28,7 @@ function watch () { // смотрит только за изменениями �
     tunnel: true,
   });
   gulp.watch('./src/scss/**/*.scss', style);
-  gulp.watch('./src/*.{html,js}').on('change', move);
+  gulp.watch(['./src/*.{html,js}', './src/scss/.*scss']).on('change', move);
   gulp.watch('./docs/**/*').on('change', browserSync.reload);
 }
 
