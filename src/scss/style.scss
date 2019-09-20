@@ -288,3 +288,69 @@ h3 {
 }
 
 // SECTION TICKETS -->
+
+// <-- FOOTER
+
+.wrapper-supportive-footer {
+  background-color: $primary-color;
+}
+
+.footer {
+  max-width: 1020px;
+  margin: 0 auto;
+  padding: 30px 40px;
+  font-family: $font-montserrat;
+}
+
+@media (min-width: 768px) {
+  .footer {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.footer__contacts {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.contacts {
+  color: #fff;
+}
+
+.headering {
+  font-size: 18px;
+}
+
+.contacts p:last-child,
+.footer__about-site {
+  font-size: 12px;
+}
+
+.contacts,
+.social-links {
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+
+.icon {
+  margin-right: 10px;
+}
+
+.footer__about-site {
+  color: #ddd;
+  display: flex;
+}
+
+@media (max-width: 480px) {
+  .footer__about-site {
+    flex-direction: column;
+  }
+}
+
+.contacts,
+.about-site__right {
+  margin-right: 30px;
+}
+
+// FOOTER -->
