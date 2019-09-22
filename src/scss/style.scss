@@ -354,3 +354,159 @@ h3 {
 }
 
 // FOOTER -->
+
+// <-- SECTION OUR TEAM
+
+.wrapper-supportive-section-our-team {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.section-our-team {
+  font-family: $font-montserrat;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #fff;
+  box-shadow: 0 0 3px 0 #e5e5e5;
+  margin-bottom: 20px;
+}
+
+.info__social-links {
+  display: flex;
+  flex-direction: column;
+}
+
+.social-links__icon {
+  margin-right: 10px;
+  width: 25px;
+  height: auto;
+}
+
+.social-links__icon:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.info > p {
+  padding: 10px;
+  font-size: 12px;
+  color: $coral-color;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.experience__heading {
+  color: $coral-color;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.experience__text {
+  font-size: 13px;
+  color: $primary-color;
+  line-height: 1.5;
+}
+
+// <-- service styles for flickity's carousel
+
+
+.flickity-button {
+  background-color: #8E80A9;
+}
+
+.flickity-prev-next-button {
+  width: 20px;
+  height: 40px;
+  border-radius: 0;
+}
+
+.flickity-button-icon {
+  fill: white;
+}
+
+.flickity-prev-next-button.previous {
+  top: 40px;
+  left: -40px;
+}
+.flickity-prev-next-button.next {
+  top: 40px;
+  right: -40px;
+}
+
+.flickity-page-dots {
+  bottom: 10px;
+}
+
+.carousel {
+  width: 302px;
+  height: 100%;
+}
+
+.carousel-cell {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 10px;
+  margin-bottom: 20px;
+}
+
+.carousel .flickity-viewport {
+  //position: absolute;
+  //width: 100%;
+}
+
+  .photo {
+    display: block;
+    position: relative;
+    width: 100px;
+  }
+
+
+@media (min-width: 900px) {
+
+  .carousel-cell {
+    align-items: flex-start;
+    flex-direction: row;
+    width: 100%;
+    //height: 100%;
+  }
+
+  .carousel {
+    width: 850px;
+    min-width: 20%;
+    height: 100%;
+  }
+
+  .flickity-prev-next-button.previous {
+    position: relative;
+    bottom: 0;
+    left: 45%;
+    top: 30px;
+  }
+
+  .flickity-prev-next-button.next {
+    position: relative;
+    bottom: 0;
+    top: 30px;
+    left: 45%;
+  }
+
+  .social-links__icon {
+    margin-bottom: 20px;
+  }
+
+  .experience {
+    margin-left: 20px;
+  }
+}
+
+// service styles for flickity's carousel -->
+
+// SECTION OUR TEAM -->

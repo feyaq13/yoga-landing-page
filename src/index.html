@@ -8,6 +8,7 @@
   <link
     href="https://fonts.googleapis.com/css?family=Roboto:500,700|Caveat|Montserrat:400,500,700&display=swap&subset=cyrillic-ext"
     rel="stylesheet">
+  <link href="https://unpkg.com/flickity@2/dist/flickity.min.css" rel="stylesheet">
   <link href="style.css" rel="stylesheet">
   <title>Document</title>
 </head>
@@ -166,6 +167,79 @@
   </section>
 </div>
 
+<div class="wrapper-supportive-section-our-team">
+  <section class="section-our-team">
+    <div class="carousel" data-flickity='{
+    "lazyLoad": 1,
+    "cellAlign": "center",
+
+    "draggable": true,
+    "pageDots": false,
+    "adaptiveHeight": true,
+    "setGallerySize": false
+    }'>
+      <div class="carousel-cell">
+        <div class="info">
+          <img class="photo" src="./images/block-our-team-photo-instructor.svg">
+          <p>
+            Инструктор
+            <br>
+            Сережа Попов
+            <br>
+            Хатха-йога
+          </p>
+          <div class="info__social-links">
+            <img class="social-links__icon" src="images/icon-vk.svg">
+            <img class="social-links__icon" src="images/icon-twitter.svg">
+          </div>
+        </div>
+        <div class="experience">
+          <h4 class="experience__heading">Опыт преподавания: 8 лет</h4>
+          <p class="experience__text">
+            Практикует с 2011 года, является сертифицированным инструктором по флоу-йоге.
+            Большой опыт преподавания йоги для начинающих и продолжающих.
+            Обучался в Индии (International Association of Yoga: classical yoga, master of principles yoga therapy),
+            Непале (опыт медитативных и дыхательных техник, проживание в Ашраме),
+            Москва (Аштанга йога центр 108 А.Константинова), Московский центр классической йоги Виктора Бойко.
+            Сертифицированный инструктор по фитнесу и йоге (БГУФК), по массажу (Оздоровительный Витал – центр №401).
+            Организатор и участник многочисленных конвенций и семинаров по йоге,
+            медитативным техникам и здоровому питанию.
+          </p>
+        </div>
+      </div>
+      <div class="carousel-cell">
+        <div class="info">
+          <img class="photo" src="./images/block-our-team-photo-instructor.svg">
+          <p>
+            Инструктор
+            <br>
+            Серёжа Попов
+            <br>
+            Флоу-йога
+          </p>
+          <div class="info__social-links">
+            <img class="social-links__icon" src="images/icon-vk.svg">
+            <img class="social-links__icon" src="images/icon-twitter.svg">
+          </div>
+        </div>
+        <div class="experience">
+          <h4 class="experience__heading">Опыт преподавания: 8 лет</h4>
+          <p class="experience__text">
+            Практикует с 2011 года, является сертифицированным инструктором по флоу-йоге.
+            Большой опыт преподавания йоги для начинающих и продолжающих.
+            Обучался в Индии (International Association of Yoga: classical yoga, master of principles yoga therapy),
+            Непале (опыт медитативных и дыхательных техник, проживание в Ашраме),
+            Москва (Аштанга йога центр 108 А.Константинова), Московский центр классической йоги Виктора Бойко.
+            Сертифицированный инструктор по фитнесу и йоге (БГУФК), по массажу (Оздоровительный Витал – центр №401).
+            Организатор и участник многочисленных конвенций и семинаров по йоге,
+            медитативным техникам и здоровому питанию.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
 <div class="wrapper-supportive-footer">
   <footer class="footer">
     <div class="footer__contacts">
@@ -202,6 +276,8 @@
   </footer>
 </div>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 <script src="main.js"></script>
 </body>
 </html>
