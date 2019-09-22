@@ -31,8 +31,9 @@ h3 {
 .wrapper-supportive-header-page {
   background-image: url(../images/header-bg.svg);
   background-repeat: no-repeat;
-  background-position: 30% center;
   background-size: cover;
+  background-position-x: 30%;
+  background-position-y: 80%;
 }
 
 .header-page {
