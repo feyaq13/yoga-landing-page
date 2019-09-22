@@ -358,24 +358,20 @@ h3 {
 
 // <-- SECTION OUR TEAM
 
-.wrapper-supportive-section-our-team {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-bottom: 20px;
-}
-
 .section-our-team {
   font-family: $font-montserrat;
+  margin: 20px;
+  padding: 20px;
 }
 
 .info {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   background-color: #fff;
   box-shadow: 0 0 3px 0 #e5e5e5;
   margin-bottom: 20px;
+  font-family: $font-montserrat;
 }
 
 .info__social-links {
@@ -394,11 +390,16 @@ h3 {
 }
 
 .info > p {
-  padding: 10px;
+  padding-right: 30px;
+  padding-left: 20px;
   font-size: 12px;
   color: $coral-color;
   font-weight: 500;
   line-height: 1.5;
+}
+
+.experience {
+  font-family: $font-montserrat;
 }
 
 .experience__heading {
@@ -431,21 +432,16 @@ h3 {
 }
 
 .flickity-prev-next-button.previous {
-  top: 40px;
-  left: -40px;
+  top: 50px;
+  left: -20px;
 }
 .flickity-prev-next-button.next {
-  top: 40px;
-  right: -40px;
+  top: 50px;
+  right: -20px;
 }
 
 .flickity-page-dots {
   bottom: 10px;
-}
-
-.carousel {
-  width: 302px;
-  height: 100%;
 }
 
 .carousel-cell {
@@ -453,30 +449,26 @@ h3 {
   height: auto;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  margin-right: 10px;
-  margin-bottom: 20px;
+  margin-right: 20px;
 }
 
-.carousel .flickity-viewport {
-  //position: absolute;
-  //width: 100%;
+.photo {
+  display: block;
+  width: 100px;
+  margin-right: 20px;
 }
 
-  .photo {
-    display: block;
-    position: relative;
-    width: 100px;
+@media (min-width: 640px) {
+
+  .section-our-team {
+    display: flex;
+    justify-content: center;
   }
-
-
-@media (min-width: 900px) {
 
   .carousel-cell {
     align-items: flex-start;
     flex-direction: row;
     width: 100%;
-    //height: 100%;
   }
 
   .carousel {
@@ -506,6 +498,7 @@ h3 {
   .experience {
     margin-left: 20px;
   }
+  
 }
 
 // service styles for flickity's carousel -->
