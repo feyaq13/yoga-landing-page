@@ -416,11 +416,6 @@ h3 {
 
 // <-- service styles for flickity's carousel
 
-
-.flickity-button {
-  background-color: #8E80A9;
-}
-
 .flickity-prev-next-button {
   width: 20px;
   height: 40px;
@@ -431,13 +426,11 @@ h3 {
   fill: white;
 }
 
-.flickity-prev-next-button.previous {
-  top: 50px;
-  left: -20px;
-}
+.flickity-prev-next-button.previous,
 .flickity-prev-next-button.next {
   top: 50px;
   right: -20px;
+  background-color: #8E80A9;
 }
 
 .carousel-cell {
