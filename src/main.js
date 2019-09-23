@@ -55,3 +55,18 @@ const $teamCarousel = $('.section-our-team__carousel-team').flickity({
   adaptiveHeight: true
 });
 
+const flkty = $teamCarousel.data('flickity')
+const $teamCarouselStatus = $('</p>').addClass('carousel-team__carousel-status')
+
+updateStatus();
+$teamCarousel.on('select.flickity', updateStatus)
+
+function updateStatus() {
+
+  const cellNumber = flkty.selectedIndex + 1
+  const flickityBtn = $('.flickity-button.flickity-prev-next-button.previous')
+
+  $teamCarouselStatus.text(cellNumber + '/' + flkty.slides.length)
+  flickityBtn.after($teamCarouselStatus)
+}
+
