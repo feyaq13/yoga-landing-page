@@ -46,3 +46,13 @@ function init () {
 }
 
 init()
+const $teamCarousel = $('.section-our-team_carousel-team').flickity({
+  contain: true,
+  lazyLoad: 1,
+  cellAlign: "center",
+  draggable: true,
+  pageDots: false,
+  adaptiveHeight: true,
+  setGallerySize: false
+});
+
