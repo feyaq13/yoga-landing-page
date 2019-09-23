@@ -52,7 +52,6 @@ const $teamCarousel = $('.section-our-team__carousel-team').flickity({
   cellAlign: "center",
   draggable: true,
   pageDots: false,
-  adaptiveHeight: true,
-  setGallerySize: false
+  adaptiveHeight: true
 });
 
