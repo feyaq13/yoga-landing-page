@@ -1,3 +1,19 @@
+init()
+
+function init () {
+  const btnNavTrigger = document.querySelector('.btn-nav-trigger')
+
+  btnNavTrigger.addEventListener('mouseenter', enterHamburger)
+  btnNavTrigger.addEventListener('mouseleave', leaveHamburger)
+  document.addEventListener('click', handlerMenu);
+
+  $(window).on('load resize', function () {
+    setupMarginTop()
+    setupInheritWidth()
+  })
+
+}
+
 function setupMarginTop () {
   const dimensionHeightNavigation = document.querySelector('.header-page').offsetHeight;
   document.querySelector('.header-page__main-content').style.marginTop = (dimensionHeightNavigation / 2) + 'px';
@@ -22,7 +38,6 @@ function handlerMenu (e) {
   const navBar = document.querySelector('.header-page__navigation')
   const navList = document.querySelector('.navigation__list')
 
-
   if (navBar.contains(target) && !target.classList.contains('phone')) {
     if (navList.classList.contains('open')) {
       navList.classList.replace('open', 'close')
@@ -34,18 +49,6 @@ function handlerMenu (e) {
   }
 }
 
-function init () {
-  const btnNavTrigger = document.querySelector('.btn-nav-trigger')
-
-  setupMarginTop()
-  setupInheritWidth()
-
-  btnNavTrigger.addEventListener('mouseenter', enterHamburger)
-  btnNavTrigger.addEventListener('mouseleave', leaveHamburger)
-  document.addEventListener('click', handlerMenu)
-}
-
-init()
 const $teamCarousel = $('.section-our-team__carousel-team').flickity({
   contain: true,
   lazyLoad: 1,
