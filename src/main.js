@@ -46,7 +46,7 @@ function init () {
 }
 
 init()
-const $teamCarousel = $('.section-our-team_carousel-team').flickity({
+const $teamCarousel = $('.section-our-team__carousel-team').flickity({
   contain: true,
   lazyLoad: 1,
   cellAlign: "center",
