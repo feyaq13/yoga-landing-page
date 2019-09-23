@@ -427,10 +427,17 @@ h3 {
 }
 
 .flickity-prev-next-button.previous,
-.flickity-prev-next-button.next {
+.flickity-prev-next-button.next  {
   top: 50px;
-  right: -20px;
   background-color: #8E80A9;
+}
+
+.flickity-prev-next-button.previous{
+  left: -20px;
+}
+
+.flickity-prev-next-button.next  {
+  right: -20px;
 }
 
 .carousel-cell {
