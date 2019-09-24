@@ -10,6 +10,7 @@ function init () {
   $(window).on('load resize', function () {
     setupMarginTop()
     setupInheritWidth()
+    $('.flickity-viewport').outerHeight($('.carousel-cell').outerHeight())
   })
 
 }
@@ -55,7 +56,8 @@ const $teamCarousel = $('.section-our-team__carousel-team').flickity({
   cellAlign: "center",
   draggable: true,
   pageDots: false,
-  adaptiveHeight: true
+  adaptiveHeight: true,
+  setGallerySize: false
 });
 
 const flkty = $teamCarousel.data('flickity')
