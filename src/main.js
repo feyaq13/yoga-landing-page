@@ -22,9 +22,16 @@ const btnNavTrigger = document.querySelector('.btn-nav-trigger')
   $(window).on('load resize', function () {
     setupMarginTop()
     setupInheritWidth()
-    moveNextChild()
+
+    if (window.matchMedia('(min-width: 640px)').matches) {
+      moveNextChild()
+    } else if ((window.matchMedia('(max-width: 640px)').matches)) {
+      $teamCarousel.flickity('reloadCells')
+    }
+
     $('.flickity-viewport').outerHeight($('.carousel-cell').outerHeight())
   })
+
 
 
 function setupMarginTop () {
@@ -89,5 +96,6 @@ function updateStatus() {
   flickityBtn.after($teamCarouselStatus)
 
 }
+
 
 
