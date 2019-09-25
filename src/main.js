@@ -1,19 +1,31 @@
-init()
+const $teamCarousel = $('.section-our-team__carousel-team').flickity({
+  contain: true,
+  cellAlign: "center",
+  draggable: true,
+  pageDots: false,
+  adaptiveHeight: true,
+  setGallerySize: false
+});
 
-function init () {
-  const btnNavTrigger = document.querySelector('.btn-nav-trigger')
+const flkty = $teamCarousel.data('flickity')
+$teamCarousel.data('flickity')
+const $teamCarouselStatus = $('</p>').addClass('carousel-team__carousel-status')
+const childrenSlider = $('.flickity-slider').children()
+
+const btnNavTrigger = document.querySelector('.btn-nav-trigger')
 
   btnNavTrigger.addEventListener('mouseenter', enterHamburger)
   btnNavTrigger.addEventListener('mouseleave', leaveHamburger)
   document.addEventListener('click', handlerMenu);
+  $teamCarousel.on('select.flickity', updateStatus)
 
   $(window).on('load resize', function () {
     setupMarginTop()
     setupInheritWidth()
+    moveNextChild()
     $('.flickity-viewport').outerHeight($('.carousel-cell').outerHeight())
   })
 
-}
 
 function setupMarginTop () {
   const dimensionHeightNavigation = document.querySelector('.header-page').offsetHeight;
@@ -50,28 +62,32 @@ function handlerMenu (e) {
   }
 }
 
-const $teamCarousel = $('.section-our-team__carousel-team').flickity({
-  contain: true,
-  lazyLoad: 1,
-  cellAlign: "center",
-  draggable: true,
-  pageDots: false,
-  adaptiveHeight: true,
-  setGallerySize: false
-});
+function moveNextChild () {
+  const cellFragment = $('<div class="carousel-cell"></div>')
 
-const flkty = $teamCarousel.data('flickity')
-const $teamCarouselStatus = $('</p>').addClass('carousel-team__carousel-status')
+  if (childrenSlider.length < 1) {
+    return updateStatus();
+  }
 
-updateStatus();
-$teamCarousel.on('select.flickity', updateStatus)
+  for (let i = 0; i < childrenSlider.length; i++) {
+    childrenSlider[i].className = "cell"
+  }
+
+  const detachedChildren = $(childrenSlider.splice(0, 3)).detach()
+  let slide = cellFragment.append(detachedChildren)
+  $('.flickity-slider').append(slide)
+
+  setTimeout(moveNextChild, 0)
+}
 
 function updateStatus() {
-
   const cellNumber = flkty.selectedIndex + 1
   const flickityBtn = $('.flickity-button.flickity-prev-next-button.previous')
 
+  $teamCarousel.flickity('reloadCells')
   $teamCarouselStatus.text(cellNumber + '/' + flkty.slides.length)
   flickityBtn.after($teamCarouselStatus)
+
 }
+
 

@@ -441,11 +441,16 @@ h3 {
 }
 
 .carousel-cell {
-  width: 100%;
-  height: auto;
+  margin-right: 20px;
   display: flex;
   flex-direction: column;
-  margin-right: 20px;
+}
+
+// для переопределения стилей и отображения с помощью флексов в колонку
+
+.cell {
+  position: static !important;
+  left: 0 !important;
 }
 
 .carousel-team__carousel-status {
@@ -472,15 +477,7 @@ h3 {
 
 @media (min-width: 640px) {
   .carousel-cell {
-    align-items: flex-start;
-    flex-direction: row;
     width: 100%;
-  }
-
-  .section-our-team_carousel-team {
-    width: 850px;
-    min-width: 20%;
-    height: 100%;
   }
 
   .flickity-prev-next-button.previous {
@@ -501,6 +498,7 @@ h3 {
     margin-left: 20px;
   }
 }
+
 
 // service styles for flickity's carousel -->
 
