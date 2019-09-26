@@ -495,6 +495,13 @@ h3 {
     width: 15px;
   }
 
+  .social-links__btn {
+    color: $primary-color;
+    border-width: 0 0 2px 0;
+    padding-bottom: 2px;
+    cursor: pointer;
+  }
+
   .photo {
     position: relative;
     left: -10px;
