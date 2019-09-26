@@ -8,12 +8,11 @@ const $teamCarousel = $('.section-our-team__carousel-team').flickity({
 });
 
 const flkty = $teamCarousel.data('flickity')
-$teamCarousel.data('flickity')
-const $teamCarouselStatus = $('</p>').addClass('carousel-team__carousel-status')
-const childrenSlider = $('.flickity-slider').children()
+const $teamCarouselStatus = $('</p>').addClass('carousel-team__carousel-status');
+let childrenSlider = $('.flickity-slider').children();
 
-const btnNavTrigger = document.querySelector('.btn-nav-trigger')
-
+(function () {
+  const btnNavTrigger = document.querySelector('.btn-nav-trigger')
   btnNavTrigger.addEventListener('mouseenter', enterHamburger)
   btnNavTrigger.addEventListener('mouseleave', leaveHamburger)
   document.addEventListener('click', handlerMenu);
@@ -22,17 +21,12 @@ const btnNavTrigger = document.querySelector('.btn-nav-trigger')
   $(window).on('load resize', function () {
     setupMarginTop()
     setupInheritWidth()
-
-    if (window.matchMedia('(min-width: 640px)').matches) {
-      moveNextChild()
-    } else if ((window.matchMedia('(max-width: 640px)').matches)) {
-      $teamCarousel.flickity('reloadCells')
-    }
-
+    moveNextChild()
+    updateStatus()
     $('.flickity-viewport').outerHeight($('.carousel-cell').outerHeight())
   })
 
-
+})()
 
 function setupMarginTop () {
   const dimensionHeightNavigation = document.querySelector('.header-page').offsetHeight;
@@ -72,19 +66,48 @@ function handlerMenu (e) {
 function moveNextChild () {
   const cellFragment = $('<div class="carousel-cell"></div>')
 
-  if (childrenSlider.length < 1) {
-    return updateStatus();
+  if (window.matchMedia('(min-width: 641px)').matches) {
+    // console.log('выполняюсь потому что от 640px')
+
+    if (childrenSlider.length === 0) {
+      console.log("!!!" + childrenSlider.length === 0)
+      childrenSlider = $('.flickity-slider').children()
+
+    } else if (childrenSlider.length > 0 && $('.carousel-cell').length !== 4) {
+
+      for (let i = 0; i < childrenSlider.length; i++) {
+        $(childrenSlider[i]).addClass('cell').removeClass('carousel-cell');
+      }
+
+      const detachedChildren = $(childrenSlider.splice(0, 3)).detach()
+      let slide = cellFragment.append(detachedChildren)
+      $('.flickity-slider').append(slide)
+
+      return moveNextChild()
+    } else {
+      console.info('я уже сгруппирован ' + 'моя длина ' + $('.carousel-cell').length)
+    }
+
+  } else if (window.matchMedia('(max-width: 640px)').matches) {
+    // console.log('выполняюсь потому что до 640px')
+
+    if (childrenSlider.length > 0 && $('.carousel-cell').length !== 10) {
+      const DetachedChildren = $('.carousel-cell').children().detach()
+      $('.carousel-cell').detach()
+      $('.flickity-slider').append(DetachedChildren)
+
+      for (let i = 0; i < $($('.flickity-slider').children()).length; i++) {
+        $($('.flickity-slider').children()[i]).removeClass('cell').addClass('carousel-cell')
+      }
+
+      childrenSlider = $('.flickity-slider').children()
+      return childrenSlider
+
+    } else {
+      console.info('а я обычный - один в каждой колонке и нас таких ' + $('.carousel-cell').length)
+    }
+
   }
-
-  for (let i = 0; i < childrenSlider.length; i++) {
-    childrenSlider[i].className = "cell"
-  }
-
-  const detachedChildren = $(childrenSlider.splice(0, 3)).detach()
-  let slide = cellFragment.append(detachedChildren)
-  $('.flickity-slider').append(slide)
-
-  setTimeout(moveNextChild, 0)
 }
 
 function updateStatus() {
@@ -94,7 +117,6 @@ function updateStatus() {
   $teamCarousel.flickity('reloadCells')
   $teamCarouselStatus.text(cellNumber + '/' + flkty.slides.length)
   flickityBtn.after($teamCarouselStatus)
-
 }
 
 
