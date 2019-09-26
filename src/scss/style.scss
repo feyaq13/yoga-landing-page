@@ -472,7 +472,6 @@ h3 {
 @media (min-width: 640px) {
 
   .carousel-cell {
-    margin-right: 20px;
     display: flex;
     flex-direction: column;
   }
@@ -483,6 +482,8 @@ h3 {
     position: static !important;
     left: 0 !important;
     display: flex;
+    align-items: flex-start;
+    margin-bottom: 30px;
   }
 
   .carousel-cell {
