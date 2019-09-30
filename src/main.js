@@ -1,10 +1,10 @@
 const $teamCarousel = $('.section-our-team__carousel-team').flickity({
   // contain: true,
   cellAlign: "center",
-  // draggable: true,
+  draggable: true,
   pageDots: false,
   resize: true,
-  // adaptiveHeight: true,
+  adaptiveHeight: true,
   setGallerySize: false
 });
 
@@ -34,10 +34,9 @@ $(document).ready(function() {
     setupMarginTop()
     setupInheritWidth()
 
-    let isDrawingCells = false
-    if (window.matchMedia('(min-width: 641px)').matches && isDrawingCells !== true) {
+    if (window.matchMedia('(min-width: 641px)').matches) {
       showGroupingCells()
-    } else if (window.matchMedia('(max-width: 640px)').matches && isDrawingCells !== true) {
+    } else if (window.matchMedia('(max-width: 640px)').matches) {
       showRegroupingCells()
     }
 
@@ -82,32 +81,23 @@ function handlerMenu (e) {
   }
 }
 
-function moveNextChild () {
-
-}
-
 function showGroupingCells () {
   const cellFragment = $('<div class="carousel-cell"></div>')
 
   if (childrenSlider.length === 0) {
-    console.log("!!!" + childrenSlider.length === 0)
     childrenSlider = $('.flickity-slider').children()
 
   } else if (childrenSlider.length > 0 && $('.carousel-cell').length !== 4) {
 
-    // if (!childrenSlider[0].contains('cell')) {
     for (let i = 0; i < childrenSlider.length; i++) {
       $(childrenSlider[i]).addClass('cell').removeClass('carousel-cell');
     }
-    // }
 
     const detachedChildren = $(childrenSlider.splice(0, 3)).detach()
     let slide = cellFragment.append(detachedChildren)
     $('.flickity-slider').append(slide)
 
     return showGroupingCells()
-  } else {
-    isDrawingCells = true
   }
 }
 
@@ -124,9 +114,6 @@ function showRegroupingCells() {
 
     childrenSlider = $('.flickity-slider').children()
     return childrenSlider
-
-  } else {
-    isDrawingCells = true
   }
 }
 
