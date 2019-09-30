@@ -453,6 +453,10 @@ h3 {
   margin-right: 25px;
 }
 
+.flickity-slider input[type="radio"] {
+  display: none;
+}
+
 @media (max-width: 640px) {
   .carousel-team__carousel-status {
     display: none;
@@ -536,6 +540,18 @@ h3 {
     left: -10px;
     bottom: 10px;
   }
+
+  .experience {
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 400px;
+  }
+
+  .cell :checked ~ .experience{
+    display: block;
+  }
+
 
 }
 
