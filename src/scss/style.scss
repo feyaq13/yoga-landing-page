@@ -435,6 +435,8 @@ h3 {
   width: 100%;
 }
 
+// service styles for flickity's carousel -->
+
 .carousel-team__carousel-status {
   position: relative;
   top: -5px;
@@ -470,10 +472,8 @@ h3 {
 }
 
 @media (min-width: 640px) {
-  .carousel-cell {
     //margin-bottom: 30px;
-  }
-
+  // <-- service styles for flickity's carousel
   .cell {
     position: static !important;
     left: 0 !important;
@@ -482,6 +482,22 @@ h3 {
     margin-left: 30px;
     margin-top: 30px;
   }
+
+  .flickity-prev-next-button.previous {
+    position: relative;
+    bottom: 0;
+    left: 45%;
+    top: 30px;
+  }
+
+  .flickity-prev-next-button.next {
+    position: relative;
+    bottom: 0;
+    top: 30px;
+    left: 45%;
+  }
+
+  // service styles for flickity's carousel -->
 
   .info {
     margin-right: 25px;
@@ -522,23 +538,6 @@ h3 {
     bottom: 10px;
   }
 
-  .flickity-prev-next-button.previous {
-    position: relative;
-    bottom: 0;
-    left: 45%;
-    top: 30px;
-  }
-
-  .flickity-prev-next-button.next {
-    position: relative;
-    bottom: 0;
-    top: 30px;
-    left: 45%;
-  }
-
 }
-
-
-// service styles for flickity's carousel -->
 
 // SECTION OUR TEAM -->
