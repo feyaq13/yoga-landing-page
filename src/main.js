@@ -1,9 +1,10 @@
 const $teamCarousel = $('.section-our-team__carousel-team').flickity({
-  contain: true,
+  // contain: true,
   cellAlign: "center",
-  draggable: true,
+  // draggable: true,
   pageDots: false,
-  adaptiveHeight: true,
+  resize: true,
+  // adaptiveHeight: true,
   setGallerySize: false
 });
 
@@ -32,7 +33,14 @@ $(document).ready(function() {
   $(window).on('load resize', function () {
     setupMarginTop()
     setupInheritWidth()
-    moveNextChild()
+
+    let isDrawingCells = false
+    if (window.matchMedia('(min-width: 641px)').matches && isDrawingCells !== true) {
+      showGroupingCells()
+    } else if (window.matchMedia('(max-width: 640px)').matches && isDrawingCells !== true) {
+      showRegroupingCells()
+    }
+
     updateStatus()
     $('.flickity-viewport').outerHeight($('.carousel-cell').outerHeight())
   })
@@ -75,49 +83,50 @@ function handlerMenu (e) {
 }
 
 function moveNextChild () {
+
+}
+
+function showGroupingCells () {
   const cellFragment = $('<div class="carousel-cell"></div>')
 
-  if (window.matchMedia('(min-width: 641px)').matches) {
-    // console.log('выполняюсь потому что от 640px')
+  if (childrenSlider.length === 0) {
+    console.log("!!!" + childrenSlider.length === 0)
+    childrenSlider = $('.flickity-slider').children()
 
-    if (childrenSlider.length === 0) {
-      console.log("!!!" + childrenSlider.length === 0)
-      childrenSlider = $('.flickity-slider').children()
+  } else if (childrenSlider.length > 0 && $('.carousel-cell').length !== 4) {
 
-    } else if (childrenSlider.length > 0 && $('.carousel-cell').length !== 4) {
+    // if (!childrenSlider[0].contains('cell')) {
+    for (let i = 0; i < childrenSlider.length; i++) {
+      $(childrenSlider[i]).addClass('cell').removeClass('carousel-cell');
+    }
+    // }
 
-      for (let i = 0; i < childrenSlider.length; i++) {
-        $(childrenSlider[i]).addClass('cell').removeClass('carousel-cell');
-      }
+    const detachedChildren = $(childrenSlider.splice(0, 3)).detach()
+    let slide = cellFragment.append(detachedChildren)
+    $('.flickity-slider').append(slide)
 
-      const detachedChildren = $(childrenSlider.splice(0, 3)).detach()
-      let slide = cellFragment.append(detachedChildren)
-      $('.flickity-slider').append(slide)
+    return showGroupingCells()
+  } else {
+    isDrawingCells = true
+  }
+}
 
-      return moveNextChild()
-    } else {
-      console.info('я уже сгруппирован ' + 'моя длина ' + $('.carousel-cell').length)
+function showRegroupingCells() {
+
+  if (childrenSlider.length > 0 && $('.carousel-cell').length !== 10) {
+    const DetachedChildren = $('.carousel-cell').children().detach()
+    $('.carousel-cell').detach()
+    $('.flickity-slider').append(DetachedChildren)
+
+    for (let i = 0; i < $($('.flickity-slider').children()).length; i++) {
+      $($('.flickity-slider').children()[i]).removeClass('cell').addClass('carousel-cell')
     }
 
-  } else if (window.matchMedia('(max-width: 640px)').matches) {
-    // console.log('выполняюсь потому что до 640px')
+    childrenSlider = $('.flickity-slider').children()
+    return childrenSlider
 
-    if (childrenSlider.length > 0 && $('.carousel-cell').length !== 10) {
-      const DetachedChildren = $('.carousel-cell').children().detach()
-      $('.carousel-cell').detach()
-      $('.flickity-slider').append(DetachedChildren)
-
-      for (let i = 0; i < $($('.flickity-slider').children()).length; i++) {
-        $($('.flickity-slider').children()[i]).removeClass('cell').addClass('carousel-cell')
-      }
-
-      childrenSlider = $('.flickity-slider').children()
-      return childrenSlider
-
-    } else {
-      console.info('а я обычный - один в каждой колонке и нас таких ' + $('.carousel-cell').length)
-    }
-
+  } else {
+    isDrawingCells = true
   }
 }
 
