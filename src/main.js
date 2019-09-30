@@ -11,6 +11,17 @@ const flkty = $teamCarousel.data('flickity')
 const $teamCarouselStatus = $('</p>').addClass('carousel-team__carousel-status');
 let childrenSlider = $('.flickity-slider').children();
 
+$(document).ready(function() {
+  $(".navigation__list").on("click","a", function (event) {
+    event.preventDefault();
+
+    let listItem  = $(this).attr('href')
+    let top = $(listItem).offset().top
+
+    $('body,html').animate({scrollTop: top}, 1000);
+  })
+});
+
 (function () {
   const btnNavTrigger = document.querySelector('.btn-nav-trigger')
   btnNavTrigger.addEventListener('mouseenter', enterHamburger)
