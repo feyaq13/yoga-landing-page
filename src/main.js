@@ -34,9 +34,9 @@ $(document).ready(function() {
     setupMarginTop()
     setupInheritWidth()
 
-    if (window.matchMedia('(min-width: 641px)').matches) {
+    if (window.matchMedia('(min-width: 769px)').matches) {
       showGroupingCells()
-    } else if (window.matchMedia('(max-width: 640px)').matches) {
+    } else if (window.matchMedia('(max-width: 768px)').matches) {
       showRegroupingCells()
     }
 

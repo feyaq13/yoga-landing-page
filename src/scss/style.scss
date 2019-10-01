@@ -462,7 +462,6 @@ h3 {
   display: none;
 }
 
-@media (max-width: 640px) {
 @media (max-width: 768px) {
   .carousel-team__carousel-status {
     display: none;
@@ -482,8 +481,12 @@ h3 {
   }
 }
 
-@media (min-width: 641px) {
 @media (min-width: 769px) {
+  .wrapper-supportive-section-season-tickets {
+    background-size: 40%;
+    background-position-y: 25%;
+  }
+
   .section-our-team {
     max-width: 1030px;
     margin-left: auto;
@@ -563,8 +566,6 @@ h3 {
   .cell :checked ~ .experience{
     display: block;
   }
-
-
 }
 
 // SECTION OUR TEAM -->
