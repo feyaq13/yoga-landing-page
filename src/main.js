@@ -10,7 +10,7 @@ const $teamCarousel = $('.section-our-team__carousel-team').flickity({
 
 const flkty = $teamCarousel.data('flickity')
 const $teamCarouselStatus = $('</p>').addClass('carousel-team__carousel-status');
-let childrenSlider = $('.flickity-slider').children();
+let childrenSlider = $teamCarousel.flickity('getCellElements');
 
 $(document).ready(function() {
   $(".navigation__list").on("click","a", function (event) {
@@ -85,7 +85,7 @@ function showGroupingCells () {
   const cellFragment = $('<div class="carousel-cell"></div>')
 
   if (childrenSlider.length === 0) {
-    childrenSlider = $('.flickity-slider').children()
+    childrenSlider = $teamCarousel.flickity('getCellElements')
 
   } else if (childrenSlider.length > 0 && $('.carousel-cell').length !== 4) {
 
@@ -112,7 +112,7 @@ function showRegroupingCells() {
       $($('.flickity-slider').children()[i]).removeClass('cell').addClass('carousel-cell')
     }
 
-    childrenSlider = $('.flickity-slider').children()
+    childrenSlider = $teamCarousel.flickity('getCellElements')
     return childrenSlider
   }
 }
