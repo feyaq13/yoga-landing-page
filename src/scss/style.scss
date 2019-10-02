@@ -428,11 +428,11 @@ h3 {
   background-color: #8E80A9;
 }
 
-.flickity-prev-next-button.previous{
+.section-our-team .flickity-prev-next-button.previous{
   left: -20px;
 }
 
-.flickity-prev-next-button.next  {
+.section-our-team .flickity-prev-next-button.next  {
   right: -20px;
 }
 
@@ -458,7 +458,7 @@ h3 {
   margin-right: 25px;
 }
 
-.flickity-slider input[type="radio"] {
+.section-our-team .flickity-slider input[type="radio"] {
   display: none;
 }
 
@@ -487,11 +487,6 @@ h3 {
     background-position-y: 25%;
   }
 
-  .section-our-team {
-    max-width: 1030px;
-    margin-left: auto;
-    margin-right: auto;
-  }
   // <-- service styles for flickity's carousel
   .cell {
     position: static !important;
@@ -502,14 +497,14 @@ h3 {
     margin-top: 30px;
   }
 
-  .flickity-prev-next-button.previous {
+  .section-our-team .flickity-prev-next-button.previous {
     position: relative;
     bottom: 0;
     left: 45%;
     top: 30px;
   }
 
-  .flickity-prev-next-button.next {
+  .section-our-team .flickity-prev-next-button.next {
     position: relative;
     bottom: 0;
     top: 30px;
@@ -522,7 +517,6 @@ h3 {
     margin-right: 25px;
     padding-right: 20px;
     min-width: 300px;
-    justify-content: space-between;
   }
 
   .info > p {
