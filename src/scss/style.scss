@@ -685,11 +685,56 @@ h3 {
 }
 
 // REVIEWS -->
+
+
+// <-- APPLICATION FORM
+
+.section-application-form {
+  background-image: url(../images/block-form-bg.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
 }
 
+.application-form__form{
+  padding: 50px 30px;
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+}
+.application-form__form > *:not(:last-child) {
+  margin-bottom: 30px;
 }
 
+.application-form__form input::placeholder {
+  color: #C8C0DB;
+}
+
+.form__input-user-name,
+.form__input-user-phone-number {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid $primary-color;
   font-size: 14px;
+  padding-bottom: 10px;
+  background-color: transparent;
 }
 
+.form__submit-button {
+  padding: 20px;
+  background-color: $coral-color;
+  color: #fff;
+  font-size: 14px;
+  border: none;
 }
+
+.only-screenreader {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+// APPLICATION FORM -->
