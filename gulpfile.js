@@ -10,7 +10,7 @@ function style () { // компилирует файл scss в css
   return gulp.src('./src/scss/**/*.scss')
     .pipe(sass()) // процесс компиляции
     .pipe(postcss([ autoprefixer() ]))
-    .pipe(gulp.dest('./docs')) // создает файл в './src'
+    .pipe(gulp.dest('./docs/css')) // создает файл в './src'
     .pipe(browserSync.stream()); // запускает browser-sync
 }
 

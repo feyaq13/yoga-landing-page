@@ -16,7 +16,7 @@ h3 {
   font-family: "Montserrat", sans-serif; }
 
 .wrapper-supportive-header-page {
-  background-image: url(/images/header-bg.svg);
+  background-image: url(../images/header-bg.svg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position-x: 30%;
@@ -113,7 +113,7 @@ h3 {
   border: none; }
 
 .wrapper-supportive-section-kinds-of-yoga {
-  background-image: url(/images/kinds-yoga-pattern.svg);
+  background-image: url(../images/kinds-yoga-pattern.svg);
   background-repeat: no-repeat;
   background-position: 0 35%; }
 
@@ -173,7 +173,7 @@ h3 {
   margin-top: 20px; }
 
 .wrapper-supportive-section-season-tickets {
-  background-image: url(/images/block-tickets-sky-pattern-big.svg);
+  background-image: url(../images/block-tickets-sky-pattern-big.svg);
   background-repeat: no-repeat;
   background-position-x: center;
   background-position-y: 25%;
@@ -523,14 +523,14 @@ h3 {
   color: #8E80A9; }
 
 .section-application-form {
-  background-image: url(/images/block-form-bg.svg);
+  background-image: url(../images/block-form-bg.svg);
   background-repeat: no-repeat;
   background-size: cover;
   display: flex; }
 
 @media (min-width: 480px) {
   .section-application-form {
-    background-image: url(/images/block-form-bg-big.png); } }
+    background-image: url(../images/block-form-bg-big.png); } }
 
 .application-form__form {
   padding: 50px 30px;
