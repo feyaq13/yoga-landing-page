@@ -11,6 +11,18 @@ const flkty = $teamCarousel.data('flickity')
 const $teamCarouselStatus = $('</p>').addClass('carousel-team__carousel-status');
 let childrenSlider = $teamCarousel.flickity('getCellElements');
 
+const $reviewsCarousel = $('.section-reviews__carousel-reviews').flickity({
+  groupCells: true,
+  contain: true,
+  draggable: true,
+  pageDots: false,
+  adaptiveHeight: true,
+  setGallerySize: false,
+})
+
+const flkty2 = $reviewsCarousel.data('flickity')
+const $reviewsCarouselStatus = $('</p>').addClass('carousel-reviews__carousel-status');
+
 $(document).ready(function() {
   $(".navigation__list").on("click","a", function (event) {
     event.preventDefault();
@@ -28,6 +40,7 @@ $(document).ready(function() {
   btnNavTrigger.addEventListener('mouseleave', leaveHamburger)
   document.addEventListener('click', handlerMenu);
   $teamCarousel.on('select.flickity', updateStatus)
+  $reviewsCarousel.on('select.flickity', updateStatus)
 
   $(window).on('load resize', function () {
     setupMarginTop()
@@ -119,11 +132,16 @@ function showRegroupingCells() {
 
 function updateStatus() {
   const cellNumber = flkty.selectedIndex + 1
-  const flickityBtn = $('.flickity-button.flickity-prev-next-button.previous')
+  const cellNumber2 = flkty2.selectedIndex + 1
+  const flickityBtn = $('.section-our-team__carousel-team .flickity-button.flickity-prev-next-button.previous')
+  const flickityBtn2 = $('.section-reviews .flickity-button.flickity-prev-next-button.previous')
 
   $teamCarousel.flickity('reloadCells')
+  $reviewsCarousel.flickity('reloadCells')
   $teamCarouselStatus.text(cellNumber + '/' + flkty.slides.length)
+  $reviewsCarouselStatus.text(cellNumber2 + '/' + flkty2.slides.length)
   flickityBtn.after($teamCarouselStatus)
+  flickityBtn2.after($reviewsCarouselStatus)
 }
 
 
