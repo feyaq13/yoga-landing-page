@@ -4,23 +4,38 @@
   box-sizing: border-box; }
 
 body {
+  background-color: #FCF8FE; }
+
+h2 {
+  color: #8E80A9;
+  font-family: "Montserrat", sans-serif; }
+
+h3 {
+  color: #8E80A9;
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif; }
+
+.wrapper-supportive-header-page {
   background-image: url(../images/header-bg.svg);
   background-repeat: no-repeat;
-  background-position: 30% center;
   background-size: cover;
-  max-width: 1020px;
-  margin: 0 auto; }
+  background-position-x: 30%;
+  background-position-y: 80%; }
 
 .header-page {
   height: 100vh;
-  margin: 0 20px; }
+  display: flex;
+  flex-direction: column;
+  max-width: 1020px;
+  margin: 0 auto; }
 
-.header__navigation {
+.header-page__navigation {
   display: flex;
   justify-content: space-between;
   padding: 10px;
   font-family: "Montserrat", sans-serif;
   position: fixed;
+  z-index: 999;
   left: 0;
   right: 0;
   margin: 0 auto; }
@@ -62,16 +77,19 @@ body {
 .list__list-item > a {
   color: #fff; }
 
+.header-page__main-content {
+  transform: translate(0, -50%); }
+
 .main-headerings__h2 {
   font-family: "Caveat", cursive;
-  color: #8E80A9;
   text-align: center; }
 
 .main-headerings__h1 {
   font-family: "Montserrat", sans-serif;
   color: #fff;
   font-size: 18vw;
-  text-align: center; }
+  text-align: center;
+  letter-spacing: 16px; }
 
 .btn-wrapper {
   font-family: "Montserrat", sans-serif;
@@ -93,3 +111,478 @@ body {
   margin-right: 10px;
   cursor: pointer;
   border: none; }
+
+.wrapper-supportive-section-kinds-of-yoga {
+  background-image: url(../images/kinds-yoga-pattern.svg);
+  background-repeat: no-repeat;
+  background-position: 0 35%; }
+
+.section-kinds-of-yoga {
+  margin: 0 auto; }
+
+.section-kinds-of-yoga__h2 {
+  text-align: center;
+  padding: 20px 0; }
+
+@media (min-width: 768px) {
+  .section-kinds-of-yoga__kinds {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; }
+  .kinds {
+    width: 100%; } }
+
+.kinds {
+  margin: 0 auto 30px auto;
+  padding: 20px 30px;
+  max-width: 500px; }
+
+.kind-info {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 18px; }
+
+.kind-info:last-child {
+  justify-content: center; }
+
+.kinds > img {
+  width: 100%;
+  display: block; }
+
+.kind__desc {
+  flex-grow: 2;
+  padding-right: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 5px 0 #e5e5e5; }
+
+.btn-kind-details {
+  padding: 10px;
+  background: #8E80A9;
+  border: none;
+  flex-grow: 1; }
+
+.btn-kind-details__icon {
+  width: 15px; }
+
+.kind__desc > * {
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 15px;
+  margin-left: 20px; }
+
+.kind__desc > h3 {
+  margin-top: 20px; }
+
+.wrapper-supportive-section-season-tickets {
+  background-image: url(../images/block-tickets-sky-pattern-big.svg);
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: 25%;
+  background-size: cover; }
+
+.section-season-tickets__tickets {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
+
+.tickets__ticket {
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0 0 5px 0 #e5e5e5;
+  margin: 0 30px 30px 30px;
+  padding: 20px 30px;
+  flex-basis: 400px; }
+
+.season-tickets__h2 {
+  text-align: center;
+  padding: 40px 0; }
+
+.ticket-desc > * {
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 15px; }
+
+.ticket-desc {
+  font-family: "Montserrat", sans-serif; }
+
+.ticket-desc > h3 {
+  font-size: 20px;
+  font-weight: 700; }
+
+.ticket__time {
+  color: #E65C7B;
+  font-size: 14px; }
+
+.ticket-price {
+  color: #8E80A9;
+  font-size: 18px;
+  font-weight: 700; }
+
+.btn-ticket {
+  padding: 20px 30px;
+  background: #8E80A9;
+  border: none;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px; }
+
+.wrapper-supportive-footer {
+  background-color: #8E80A9; }
+
+.footer {
+  max-width: 1020px;
+  margin: 0 auto;
+  padding: 30px 40px;
+  font-family: "Montserrat", sans-serif; }
+
+.footer__contacts {
+  display: flex;
+  flex-wrap: wrap; }
+
+.contacts {
+  color: #fff; }
+
+@media (min-width: 896px) {
+  .wrapper-supportive-footer {
+    position: relative; }
+  .footer__contacts {
+    position: absolute;
+    top: 25%; }
+  .contacts {
+    color: #8E80A9; }
+  .footer__about-site {
+    justify-content: space-between; }
+  .about-site__right {
+    order: 1; }
+  .social-links {
+    position: absolute;
+    top: 50%; }
+  .icon path {
+    fill: #8E80A9;
+    fill-opacity: 0.65; } }
+
+.headering {
+  font-size: 18px; }
+
+.contacts p:last-child,
+.footer__about-site {
+  font-size: 12px; }
+
+.social-links {
+  margin-bottom: 20px;
+  margin-right: 20px; }
+
+.contacts > .contacts:first-child,
+.contacts > .contacts:last-child {
+  margin-bottom: 20px; }
+
+.contacts,
+.about-site__right {
+  margin-right: 20px; }
+
+.icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px; }
+
+.footer__about-site {
+  color: #ddd;
+  display: flex; }
+
+@media (max-width: 480px) {
+  .footer__about-site {
+    flex-direction: column; } }
+
+.section-our-team {
+  font-family: "Montserrat", sans-serif;
+  margin: 20px;
+  padding: 20px; }
+
+.section-our-team__h2 {
+  text-align: center;
+  margin-bottom: 35px; }
+
+.info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  box-shadow: 0 0 3px 0 #e5e5e5;
+  margin-bottom: 25px;
+  font-family: "Montserrat", sans-serif; }
+
+.social-links__icon {
+  width: 20px; }
+
+.info > p {
+  font-size: 12px;
+  color: #E65C7B;
+  font-weight: 500;
+  line-height: 2; }
+
+@media (max-width: 364px) {
+  .info > p {
+    margin-right: 15px;
+    line-height: 1.5; } }
+
+.experience {
+  font-family: "Montserrat", sans-serif; }
+
+.experience__heading {
+  color: #E65C7B;
+  margin-bottom: 15px;
+  font-size: 14px; }
+
+.experience__text {
+  font-size: 13px;
+  color: #8E80A9;
+  line-height: 1.5; }
+
+.photo {
+  display: block; }
+
+@media (max-width: 364px) {
+  .photo {
+    margin-right: 15px; } }
+
+.flickity-button-icon {
+  fill: white; }
+
+.flickity-prev-next-button:hover {
+  background: rgba(132, 113, 168, 0.6); }
+
+.flickity-prev-next-button {
+  width: 20px;
+  height: 40px;
+  border-radius: 0;
+  background-color: #8E80A9; }
+
+.flickity-prev-next-button {
+  top: 40px; }
+
+.section-our-team .flickity-prev-next-button.previous {
+  left: -20px; }
+
+.section-our-team .flickity-prev-next-button.next {
+  right: -20px; }
+
+.carousel-cell {
+  margin-right: 20px;
+  width: 100%; }
+
+.carousel-team__carousel-status {
+  position: relative;
+  top: -5px;
+  left: 45%;
+  display: inline-block;
+  margin: 0 20px;
+  font-size: 14px;
+  letter-spacing: 4px; }
+
+.section-our-team .flickity-slider input[type="radio"] {
+  display: none; }
+
+@media (max-width: 768px) {
+  .carousel-team__carousel-status {
+    display: none; }
+  .social-links__btn {
+    display: none; }
+  .social-links__icon:not(:last-child) {
+    margin-bottom: 25px; }
+  .social-links__icon {
+    display: block;
+    margin-right: 20px; } }
+
+@media (min-width: 769px) {
+  .wrapper-supportive-section-season-tickets {
+    background-size: 40%;
+    background-position-y: 25%; }
+  .cell {
+    position: static !important;
+    left: 0 !important;
+    display: flex;
+    align-items: flex-start;
+    margin-left: 30px;
+    margin-top: 30px; }
+  .section-our-team .flickity-prev-next-button.previous,
+  .section-our-team .flickity-prev-next-button.next {
+    position: relative;
+    bottom: 0;
+    top: 30px;
+    left: 45%; }
+  .info {
+    padding-right: 20px;
+    min-width: 300px; }
+  .info > p {
+    font-size: 10px;
+    line-height: 1.5; }
+  .info__social-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: stretch;
+    justify-content: space-around; }
+  .social-links__icon {
+    width: 15px; }
+  .social-links__btn {
+    color: #8E80A9;
+    border-width: 0 0 2px 0;
+    padding-bottom: 2px;
+    cursor: pointer; }
+  .photo {
+    position: relative;
+    left: -10px;
+    bottom: 10px; }
+  .experience {
+    position: absolute;
+    display: none;
+    top: 20px;
+    left: 400px; }
+  .cell :checked ~ .experience {
+    display: block; } }
+
+.section-reviews {
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-bottom: 35px;
+  font-family: "Montserrat", sans-serif; }
+
+.section-reviews__h2 {
+  text-align: center;
+  margin-bottom: 35px; }
+
+.section-reviews .flickity-slider {
+  margin-top: 3px;
+  margin-left: 3px; }
+
+.section-reviews .flickity-prev-next-button.previous,
+.section-reviews .flickity-prev-next-button.next {
+  top: 100%; }
+
+.carousel-reviews__carousel-status {
+  position: relative;
+  z-index: -1;
+  top: 10px;
+  margin: 0 20px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 14px;
+  letter-spacing: 4px; }
+
+@media (min-width: 320px) {
+  .section-reviews .flickity-prev-next-button.previous {
+    left: 30%; }
+  .section-reviews .flickity-prev-next-button.next {
+    right: 30%; } }
+
+@media (min-width: 640px) {
+  .section-reviews .flickity-prev-next-button.previous {
+    left: 40%; }
+  .section-reviews .flickity-prev-next-button.next {
+    right: 40%; } }
+
+.review {
+  width: 99%;
+  margin-right: 10px;
+  background-color: #fff;
+  box-shadow: 0 0 4px #e5e5e5;
+  font-size: 12px;
+  padding: 15px; }
+
+@media (min-width: 640px) {
+  .review {
+    width: calc((100% - 15px)/2); } }
+
+@media (min-width: 960px) {
+  .review {
+    width: calc((100% - 25px)/3); } }
+
+@media (min-width: 1280px) {
+  .review {
+    width: calc((100% - 35px)/4); } }
+
+@media (min-width: 1440px) {
+  .review {
+    width: calc((100% - 45px)/5); } }
+
+.review__text {
+  color: #8E80A9;
+  line-height: 1.5;
+  margin-bottom: 25px; }
+
+.review__user {
+  display: flex; }
+
+.review__photo {
+  margin-right: 15px; }
+
+.review__user-name {
+  color: #E65C7B;
+  margin-bottom: 5px;
+  font-weight: 500; }
+
+.review__date {
+  color: #8E80A9; }
+
+.section-application-form {
+  background-image: url(../images/block-form-bg.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex; }
+
+@media (min-width: 480px) {
+  .section-application-form {
+    background-image: url(../images/block-form-bg-big.png); } }
+
+.application-form__form {
+  padding: 50px 30px;
+  display: flex;
+  flex-direction: column;
+  max-width: 500px; }
+
+.section-application-form {
+  justify-content: flex-end; }
+
+@media (max-width: 896px) {
+  .section-application-form {
+    justify-content: center; } }
+
+.application-form__form > *:not(:last-child) {
+  margin-bottom: 30px; }
+
+.application-form__form input::-webkit-input-placeholder {
+  color: #C8C0DB; }
+
+.application-form__form input::-moz-placeholder {
+  color: #C8C0DB; }
+
+.application-form__form input:-ms-input-placeholder {
+  color: #C8C0DB; }
+
+.application-form__form input::-ms-input-placeholder {
+  color: #C8C0DB; }
+
+.application-form__form input::placeholder {
+  color: #C8C0DB; }
+
+.form__input-user-name,
+.form__input-user-phone-number {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid #8E80A9;
+  font-size: 14px;
+  padding-bottom: 10px;
+  background-color: transparent; }
+
+.form__submit-button {
+  padding: 20px;
+  background-color: #E65C7B;
+  color: #fff;
+  font-size: 14px;
+  border: none; }
+
+.only-screenreader {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px; }
