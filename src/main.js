@@ -1,5 +1,4 @@
 const $teamCarousel = $('.section-our-team__carousel-team').flickity({
-  // contain: true,
   cellAlign: "center",
   draggable: true,
   pageDots: false,
@@ -85,7 +84,8 @@ function showGroupingCells () {
   const cellFragment = $('<div class="carousel-cell"></div>')
 
   if (childrenSlider.length === 0) {
-    childrenSlider = $teamCarousel.flickity('getCellElements')
+    // childrenSlider = $teamCarousel.flickity('getCellElements')
+    childrenSlider = $('.section-our-team__carousel-team .flickity-slider').children()
 
   } else if (childrenSlider.length > 0 && $('.carousel-cell').length !== 4) {
 
@@ -95,7 +95,7 @@ function showGroupingCells () {
 
     const detachedChildren = $(childrenSlider.splice(0, 3)).detach()
     let slide = cellFragment.append(detachedChildren)
-    $('.flickity-slider').append(slide)
+    $('.section-our-team__carousel-team .flickity-slider').append(slide)
 
     return showGroupingCells()
   }
@@ -106,13 +106,13 @@ function showRegroupingCells() {
   if (childrenSlider.length > 0 && $('.carousel-cell').length !== 10) {
     const DetachedChildren = $('.carousel-cell').children().detach()
     $('.carousel-cell').detach()
-    $('.flickity-slider').append(DetachedChildren)
+    $('.section-our-team__carousel-team .flickity-slider').append(DetachedChildren)
 
     for (let i = 0; i < $($('.flickity-slider').children()).length; i++) {
-      $($('.flickity-slider').children()[i]).removeClass('cell').addClass('carousel-cell')
+      $($('.section-our-team__carousel-team .flickity-slider').children()[i]).removeClass('cell').addClass('carousel-cell')
     }
 
-    childrenSlider = $teamCarousel.flickity('getCellElements')
+    childrenSlider = $('.section-our-team__carousel-team .flickity-slider').children()
     return childrenSlider
   }
 }
