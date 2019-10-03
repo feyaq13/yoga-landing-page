@@ -53,7 +53,7 @@ $(document).ready(function() {
     }
 
     updateStatus()
-    $('.flickity-viewport').outerHeight($('.carousel-cell').outerHeight())
+    $('.section-our-team .flickity-viewport').outerHeight($('.carousel-cell').outerHeight())
     $('.section-reviews .flickity-viewport').outerHeight($('.review').outerHeight() + 20)
   })
 
