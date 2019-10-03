@@ -302,12 +302,6 @@ h3 {
   font-family: $font-montserrat;
 }
 
-@media (min-width: 768px) {
-  .footer {
-    display: flex;
-    flex-wrap: wrap;
-  }
-}
 
 .footer__contacts {
   display: flex;
@@ -316,6 +310,40 @@ h3 {
 
 .contacts {
   color: #fff;
+}
+
+@media (min-width: 896px) {
+  .wrapper-supportive-footer {
+    position: relative;
+  }
+
+  .footer__contacts {
+    position: absolute;
+    top: 25%;
+  }
+
+  .contacts {
+    color: $primary-color;
+  }
+
+  .footer__about-site {
+    justify-content: space-between;
+  }
+
+  .about-site__right {
+    order: 1;
+  }
+
+  .social-links {
+    position: absolute;
+    top: 50%;
+  }
+
+  .icon path {
+    fill: $primary-color;
+    fill-opacity: 0.65;
+  }
+
 }
 
 .headering {
@@ -343,6 +371,8 @@ h3 {
 }
 
 .icon {
+  width: 20px;
+  height: 20px;
   margin-right: 10px;
 }
 
@@ -604,7 +634,7 @@ h3 {
   font-size: 14px;
   letter-spacing: 4px;
 }
-//
+
 @media (min-width: 320px) {
   .section-reviews .flickity-prev-next-button.previous {
     left: 30%;
@@ -696,12 +726,29 @@ h3 {
   display: flex;
 }
 
+@media (min-width: 480px) {
+  .section-application-form {
+    background-image: url(../images/block-form-bg-big.png);
+  }
+}
+
 .application-form__form{
   padding: 50px 30px;
   display: flex;
   flex-direction: column;
   max-width: 500px;
 }
+
+.section-application-form {
+  justify-content: flex-end;
+}
+
+@media (max-width: 896px) {
+  .section-application-form {
+    justify-content: center;
+  }
+}
+
 .application-form__form > *:not(:last-child) {
   margin-bottom: 30px;
 }
