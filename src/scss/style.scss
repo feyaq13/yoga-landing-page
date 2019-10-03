@@ -422,9 +422,11 @@ h3 {
   fill: white;
 }
 
-.flickity-prev-next-button.previous,
-.flickity-prev-next-button.next  {
-  top: 50px;
+.section-our-team .flickity-prev-next-button {
+  top: 40px;
+}
+
+.flickity-prev-next-button {
   background-color: #8E80A9;
 }
 
@@ -497,13 +499,7 @@ h3 {
     margin-top: 30px;
   }
 
-  .section-our-team .flickity-prev-next-button.previous {
-    position: relative;
-    bottom: 0;
-    left: 45%;
-    top: 30px;
-  }
-
+  .section-our-team .flickity-prev-next-button.previous,
   .section-our-team .flickity-prev-next-button.next {
     position: relative;
     bottom: 0;
