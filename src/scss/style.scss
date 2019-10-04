@@ -438,16 +438,16 @@ button {
   justify-content: space-between;
   background-color: #fff;
   box-shadow: 0 0 3px 0 #e5e5e5;
-  margin-bottom: 25px;
+  margin: 0 10px 25px 10px;
   font-family: $font-montserrat;
 }
 
 .social-links__icon {
-  width: 20px;
+  width: 18px;
 }
 
 .info > p {
-  font-size: 12px;
+  font-size: 10px;
   color: $coral-color;
   font-weight: 500;
   line-height: 2;
@@ -462,16 +462,16 @@ button {
 
 .experience {
   font-family: $font-montserrat;
+  font-size: 12px;
+  margin: 0 10px;
 }
 
 .experience__heading {
   color: $coral-color;
   margin-bottom: 15px;
-  font-size: 14px;
 }
 
 .experience__text {
-  font-size: 13px;
   color: $primary-color;
   line-height: 1.5;
 }
