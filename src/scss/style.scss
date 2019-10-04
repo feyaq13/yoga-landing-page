@@ -271,7 +271,11 @@ button {
   margin: 0 20px 30px 20px;
   padding: 20px 30px;
   flex-basis: 250px;
+  transition: transform .2s ease-in-out;
 }
+
+.tickets__ticket:hover {
+  transform: scale(1.1);
 }
 
 .season-tickets__h2 {
