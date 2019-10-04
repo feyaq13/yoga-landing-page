@@ -128,6 +128,15 @@ button {
   justify-content: center;
 }
 
+.btn-wrapper__button {
+  background: $coral-color;
+  color: #fff;
+  width: 30px;
+  height: 26px;
+  margin-right: 10px;
+  border: none;
+}
+
 .btn-text {
   color: $coral-color;
   background: none;
@@ -136,14 +145,13 @@ button {
   font-weight: bold;
 }
 
-.btn-wrapper > button {
-  background: $coral-color;
-  color: #fff;
-  width: 30px;
-  height: 26px;
-  margin-right: 10px;
-  cursor: pointer;
-  border: none;
+.btn-text_link-anchor {
+  text-decoration: none;
+  color: $coral-color;
+
+    &:hover {
+      text-decoration: underline;
+    }
 }
 
 // HEADER -->

@@ -37,11 +37,17 @@
         <h1 class="main-headerings__h1">YOGA</h1>
       </div>
       <div class="btn-wrapper">
-        <button class="">
-          <img alt="" class="icon-arrow" src="images/icon-arrow.svg">
-        </button>
-        <p class="btn-text">Запишитесь на бесплатное
-          пробное занятие</p>
+        <a href="#form" class="btn-wrapper__link-anchor">
+          <button class="btn-wrapper__button">
+            <img alt="" class="icon-arrow" src="images/icon-arrow.svg">
+          </button>
+        </a>
+        <p class="btn-text">
+          <a class="btn-text_link-anchor" href="#form">
+            Запишитесь на бесплатное
+            пробное занятие
+          </a>
+        </p>
       </div>
     </div>
   </header>
@@ -694,7 +700,7 @@
 
 <div class="wrapper-supportive-footer">
   <section class="section-application-form">
-    <form enctype="multipart/form-data" class="application-form__form" action="" method="POST">
+    <form enctype="multipart/form-data" class="application-form__form" id="form" action="" method="POST">
       <h2 class="form__h2">
         Запишитесь на бесплатное пробное занятие
       </h2>
