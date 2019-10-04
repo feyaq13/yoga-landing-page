@@ -24,6 +24,10 @@ h3 {
   font-weight: 500;
   font-family: $font-montserrat;
 }
+
+button {
+  cursor: pointer;
+}
 // COMMON -->
 
 // <-- HEADER
@@ -57,7 +61,6 @@ h3 {
 }
 
 .btn-nav-trigger {
-  cursor: pointer;
   border: none;
   background: transparent;
 }
@@ -577,7 +580,6 @@ h3 {
     color: $primary-color;
     border-width: 0 0 2px 0;
     padding-bottom: 2px;
-    cursor: pointer;
   }
 
   .photo {
