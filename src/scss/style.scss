@@ -763,9 +763,7 @@ button {
 
 .form__input-user-name,
 .form__input-user-phone-number {
-  border-top: none;
-  border-left: none;
-  border-right: none;
+  border-style: none;
   border-bottom: 1px solid $primary-color;
   font-size: 14px;
   padding-bottom: 10px;
