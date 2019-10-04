@@ -496,9 +496,12 @@ button {
   background: hsla(261, 24%, 55%, 0.6)
 }
 
+.section-our-team__carousel-team .flickity-prev-next-button {
+  width: 15px;
+  height: 34px;
+}
+
 .flickity-prev-next-button {
-  width: 20px;
-  height: 40px;
   border-radius: 0;
   background-color: #8E80A9;
 }
@@ -653,6 +656,8 @@ button {
 .section-reviews .flickity-prev-next-button.previous,
 .section-reviews .flickity-prev-next-button.next {
   top: 100%;
+  width: 25px;
+  height: 20px;
 }
 
 .carousel-reviews__carousel-status {
