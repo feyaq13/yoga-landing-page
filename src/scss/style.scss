@@ -395,8 +395,7 @@ button {
   margin-bottom: 20px;
 }
 
-.contacts,
-.about-site__right {
+.contacts {
   margin-right: 20px;
 }
 
@@ -414,6 +413,12 @@ button {
 @media (max-width: 480px) {
   .footer__about-site {
     flex-direction: column;
+  }
+}
+
+@media (max-width: 896px) {
+  .about-site__right {
+    margin-right: 20px;
   }
 }
 
