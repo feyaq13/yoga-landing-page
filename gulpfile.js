@@ -24,6 +24,7 @@ function watch () { // смотрит только за изменениями �
     server: {
       baseDir: './docs'
     },
+    port: 3000,
     online: true,
     tunnel: true,
   });
