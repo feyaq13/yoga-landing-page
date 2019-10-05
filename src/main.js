@@ -9,7 +9,7 @@ const $teamCarousel = $('.section-our-team__carousel-team').flickity({
 
 const flkty = $teamCarousel.data('flickity')
 const $teamCarouselStatus = $('</p>').addClass('carousel-team__carousel-status');
-let childrenSlider = flkty.cells;
+let childrenSlider = $teamCarousel.flickity('getCellElements');
 
 const $reviewsCarousel = $('.section-reviews__carousel-reviews').flickity({
   groupCells: true,
@@ -98,18 +98,17 @@ function showGroupingCells () {
   const cellFragment = $('<div class="carousel-cell"></div>')
 
   if (childrenSlider.length === 0) {
-    childrenSlider = flkty.cells
+    childrenSlider = $teamCarousel.flickity('getCellElements')
     // childrenSlider = $('.section-our-team__carousel-team .flickity-slider').children()
 
   } else if (childrenSlider.length > 0 && $('.carousel-cell').length !== 4) {
 
-    let namingCells = flkty.cells.map(function(cell) {
+    flkty.cells.map(function(cell) {
       cell.element.classList.value = 'cell'
       return cell.element
     })
 
-    const detachedChildren = $(namingCells.splice(0, 3)).detach()
-    console.log(detachedChildren)
+    const detachedChildren = $(childrenSlider.splice(0, 3)).detach()
     let slide = cellFragment.append(detachedChildren)
     $('.section-our-team__carousel-team .flickity-slider').append(slide)
 
@@ -139,7 +138,7 @@ function showRegroupingCells() {
     }
 
     // childrenSlider = $('.section-our-team__carousel-team .flickity-slider').children()
-    childrenSlider = flkty.cells
+    childrenSlider = $teamCarousel.flickity('getCellElements')
     return childrenSlider
   }
 }
