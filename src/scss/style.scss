@@ -48,6 +48,12 @@ button {
   margin: 0 auto;
 }
 
+//@media (max-width: 960px) {
+//  .header-page {
+//    height: 100vh;
+//  }
+//}
+
 .header-page__navigation {
   display: flex;
   justify-content: space-between;
@@ -321,7 +327,7 @@ button {
 
 // <-- FOOTER
 
-.wrapper-supportive-footer {
+.wrapper-footer {
   background-color: $primary-color;
 }
 
@@ -331,7 +337,6 @@ button {
   padding: 30px 40px;
   font-family: $font-montserrat;
 }
-
 
 .footer__contacts {
   display: flex;
@@ -760,18 +765,23 @@ button {
 
 // <-- APPLICATION FORM
 
-.section-application-form {
-  background-image: url(../images/block-form-bg.svg);
+.wrapper-section-application-form {
+  background-image: url(../images/footer-block-form-bg@1x.png);
   background-repeat: no-repeat;
   background-size: cover;
-  display: flex;
 }
 
-@media (min-width: 480px) {
-  .section-application-form {
-    background-image: url(../images/block-form-bg-big.png);
-  }
+.section-application-form {
+  display: flex;
+  max-width: 1020px;
 }
+
+//@media (min-width: 480px) and (min-resolution: 144dpi),
+//(min-width: 480px) and (min-resolution: 1.5dppx) {
+//  .wrapper-section-application-form {
+//    background-image: url(../images/footer-block-form-bg@2x.png);
+//  }
+//}
 
 .application-form__form{
   padding: 50px 30px;
@@ -782,6 +792,7 @@ button {
 
 .section-application-form {
   justify-content: flex-end;
+  margin: 0 auto;
 }
 
 @media (max-width: 896px) {
