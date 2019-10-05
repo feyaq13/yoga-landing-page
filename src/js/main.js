@@ -13,7 +13,7 @@ const $teamCarousel = $('.section-our-team__carousel-team').flickity({
   setGallerySize: false
 });
 
-const flkty = $teamCarousel.data('flickity');
+const teamFlkty = $teamCarousel.data('flickity');
 const $teamCarouselStatus = $('</p>').addClass('carousel-team__carousel-status');
 let childrenSlider = $('.section-our-team__carousel-team .flickity-slider').children();
 
@@ -40,29 +40,27 @@ $(document).ready(function () {
   });
 });
 
-(function () {
-  const btnNavTrigger = document.querySelector('.btn-nav-trigger');
-  btnNavTrigger.addEventListener('mouseenter', enterHamburger);
-  btnNavTrigger.addEventListener('mouseleave', leaveHamburger);
-  document.addEventListener('click', handlerMenu);
-  $teamCarousel.on('select.flickity', updateStatus);
-  $reviewsCarousel.on('select.flickity', updateStatus);
+const btnNavTrigger = document.querySelector('.btn-nav-trigger');
+btnNavTrigger.addEventListener('mouseenter', enterHamburger);
+btnNavTrigger.addEventListener('mouseleave', leaveHamburger);
+document.addEventListener('click', handlerMenu);
+$teamCarousel.on('select.flickity', updateStatus);
+$reviewsCarousel.on('select.flickity', updateStatus);
 
-  $(window).on('load resize', function () {
-    setupMarginTop();
-    setupInheritWidth();
+$(window).on('load resize', function () {
+  setupMarginTop();
+  setupInheritWidth();
 
-    if (window.matchMedia('(min-width: 769px)').matches) {
-      showGroupingCells();
-    } else if (window.matchMedia('(max-width: 768px)').matches) {
-      showRegroupingCells();
-    }
+  if (window.matchMedia('(min-width: 769px)').matches) {
+    showGroupingCells();
+  } else if (window.matchMedia('(max-width: 768px)').matches) {
+    showRegroupingCells();
+  }
 
-    updateStatus();
-    $('.section-our-team .flickity-viewport').outerHeight($('.carousel-cell').outerHeight());
-    $('.section-reviews .flickity-viewport').outerHeight($('.review').outerHeight() + 20);
-  });
-})();
+  updateStatus();
+  $('.section-our-team .flickity-viewport').outerHeight($('.carousel-cell').outerHeight());
+  $('.section-reviews .flickity-viewport').outerHeight($('.review').outerHeight() + 20);
+});
 
 function setupMarginTop () {
   const dimensionHeightNavigation = document.querySelector('.header-page').offsetHeight;
@@ -105,24 +103,13 @@ function showGroupingCells () {
   if (childrenSlider.length === 0) {
     childrenSlider = $('.section-our-team__carousel-team .flickity-slider').children();
   } else if (childrenSlider.length > 0 && $('.carousel-cell').length !== 4) {
-    flkty.cells.map(function (cell) {
+    teamFlkty.cells.forEach(function (cell) {
       cell.element.classList.value = 'cell';
-      return cell.element;
     });
 
     const detachedChildren = $(childrenSlider.splice(0, 3)).detach();
     const slide = cellFragment.append(detachedChildren);
     $('.section-our-team__carousel-team .flickity-slider').append(slide);
-
-    // for (let i = 0; i < childrenSlider.length; i++) {
-    //   $(childrenSlider[i]).addClass('cell').removeClass('carousel-cell');
-    // }
-
-    // const detachedChildren = $(flkty.cells.splice(0, 3)).detach()
-    // console.log(detachedChildren.element)
-    // let slide = cellFragment.append(detachedChildren.join(''))
-    // // console.log(slide)
-    // $('.section-our-team__carousel-team .flickity-slider').append(slide)
 
     return showGroupingCells();
   }
@@ -133,7 +120,6 @@ function showRegroupingCells () {
     const DetachedChildren = $('.carousel-cell').children().detach();
     $('.carousel-cell').detach();
     $('.section-our-team__carousel-team .flickity-slider').append(DetachedChildren);
-
     for (let i = 0; i < $($('.flickity-slider').children()).length; i++) {
       $($('.section-our-team__carousel-team .flickity-slider').children()[i]).removeClass('cell').addClass('carousel-cell');
     }
@@ -144,14 +130,14 @@ function showRegroupingCells () {
 }
 
 function updateStatus () {
-  const cellNumber = flkty.selectedIndex + 1;
+  const cellNumber = teamFlkty.selectedIndex + 1;
   const cellNumber2 = flkty2.selectedIndex + 1;
   const flickityBtn = $('.section-our-team__carousel-team .flickity-button.flickity-prev-next-button.previous');
   const flickityBtn2 = $('.section-reviews .flickity-button.flickity-prev-next-button.previous');
 
   $teamCarousel.flickity('reloadCells');
   $reviewsCarousel.flickity('reloadCells');
-  $teamCarouselStatus.text(cellNumber + '/' + flkty.slides.length);
+  $teamCarouselStatus.text(cellNumber + '/' + teamFlkty.slides.length);
   $reviewsCarouselStatus.text(cellNumber2 + '/' + flkty2.slides.length);
   flickityBtn.after($teamCarouselStatus);
   flickityBtn2.after($reviewsCarouselStatus);
