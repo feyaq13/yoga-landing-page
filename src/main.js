@@ -1,3 +1,9 @@
+const $ = require('jquery');
+const Flickity = require('flickity');
+const jQueryBridget = require('jquery-bridget');
+
+jQueryBridget('flickity', Flickity, $);
+
 const $teamCarousel = $('.section-our-team__carousel-team').flickity({
   cellAlign: "center",
   draggable: true,

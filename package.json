@@ -3,7 +3,8 @@
   "description": "",
   "main": "index.html",
   "scripts": {
-    "start": "gulp watch"
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html --out-dir docs"
   },
   "repository": {
     "type": "git"
@@ -11,13 +12,15 @@
   "author": "feyaq",
   "license": "MIT",
   "devDependencies": {
-    "browser-sync": "^2.26.7",
-    "gulp": "^4.0.2",
-    "gulp-sass": "^4.0.2",
-    "gulp-postcss": "^8.0.0"
+    "parcel-bundler": "^1.12.3",
+    "sass": "^1.23.0",
+    "typescript": "^3.6.3"
   },
   "dependencies": {
     "autoprefixer": "^9.6.1",
+    "flickity": "^2.2.1",
+    "jquery": "^3.4.1",
+    "jquery-bridget": "^2.0.1",
     "postcss-cli": "^6.1.3"
   }
 }
