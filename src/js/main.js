@@ -7,7 +7,6 @@ jQueryBridget('flickity', Flickity, $);
 var carouselContainers = document.querySelectorAll('.carousel-container');
 
 const $teamCarousel = initCarouselContainer( carouselContainers[0], {
-  cellAlign: 'center',
   draggable: true,
   pageDots: false,
   resize: true,
@@ -27,15 +26,11 @@ function initCarouselContainer( container, options ) {
   var carousel = container.querySelector('.carousel');
 
   var flkty = new Flickity( carousel, {
-    options
+    ...options
   });
-
-  flkty.reloadCells()
 
   var carouselStatus = container.querySelector('.carousel__carousel-status');
   const flickityBtn = container.querySelector('.previous');
-
-  console.dir(carouselStatus)
 
   function updateStatus() {
     var slideNumber = flkty.selectedIndex + 1;
@@ -80,7 +75,7 @@ $(window).on('load resize', function () {
 
   $teamCarousel.reloadCells()
   $('.section-our-team .flickity-viewport').outerHeight($('.carousel-cell').outerHeight());
-  $('.section-reviews .flickity-viewport').outerHeight($('.review').outerHeight() + 20);
+  $('.section-reviews .flickity-viewport').outerHeight($('.review').outerHeight());
 });
 
 function setupMarginTop () {
