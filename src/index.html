@@ -57,8 +57,20 @@
   <section class="section-kinds-of-yoga" id="kinds">
     <h2 class="section-kinds-of-yoga__h2">Направления</h2>
     <section class="section-kinds-of-yoga__kinds">
-      <article class="kinds">
-        <img alt="девушки, занимающиеся хатха-йогой" src="images/kind-hatha-yoga.svg">
+      <article class="kind">
+        <div class="wrapper-img">
+          <picture>
+            <source
+              media="(min-width: 980px)"
+              srcset="images/kind-hatha-yoga-desktop@1x.jpeg 1x,
+                    images/kind-hatha-yoga-desktop@2x.jpeg 2x">
+            <source
+              media="(max-width: 979px)"
+              srcset="images/kind-hatha-yoga@1x.jpeg 1x,
+                    images/kind-hatha-yoga@2x.jpeg 2x">
+            <img class="kind__img" src="">
+          </picture>
+        </div>
         <div class="kind-info">
           <div class="kind__desc">
             <h3>Хатха-йога</h3>
@@ -78,11 +90,23 @@
           </button>
         </div>
       </article>
-      <article class="kinds">
-        <img alt="девушки, занимающиеся аштанга-йогой" src="images/kind-ashatnga-yoga.svg">
+      <article class="kind">
+        <div class="wrapper-img">
+          <picture>
+            <source media="(min-width: 980px)"
+                    srcset="images/kind-ashatnga-yoga-desktop@1x.jpg 1x,
+                            images/kind-ashatnga-yoga-desktop@2x.jpg 2x">
+            <source media="(min-width: 786px)"
+                    srcset="images/kind-ashatnga-yoga-786@1x.jpg 1x,
+                            images/kind-ashatnga-yoga-786@2x.jpg 2x">
+            <img class="kind__img"
+                 src="images/kind-ashtanga-yoga@1x.jpeg"
+                 srcset="images/kind-ashtanga-yoga@2x.jpeg 2x">
+          </picture>
+        </div>
         <div class="kind-info">
           <div class="kind__desc">
-            <h3>Хатха-йога</h3>
+            <h3>Аштанга-йога</h3>
             <p>
               Пн, Ср, Пт – с 12:00 до 15:00
               <br>
@@ -99,11 +123,23 @@
           </button>
         </div>
       </article>
-      <article class="kinds">
-        <img alt="девушки, занимающиеся кундалини-йогой" src="images/kind-kyndalini-yoga.svg">
+      <article class="kind">
+        <div class="wrapper-img">
+          <picture>
+            <source media="(min-width: 980px)"
+                    srcset="images/kind-kyndalini-yoga-desktop@1x.jpg 1x,
+                            images/kind-kyndalini-yoga-desktop@2x.jpg 2x">
+            <source media="(min-width: 786px)"
+                    srcset="images/kind-kyndalini-yoga-786@1x.jpg 1x,
+                            images/kind-kyndalini-yoga-786@2x.jpg 2x">
+            <img class="kind__img"
+                 src="images/kind-kyndalini-yoga@1x.jpeg"
+                 srcset="images/kind-kyndalini-yoga@2x.jpeg 2x">
+          </picture>
+        </div>
         <div class="kind-info">
           <div class="kind__desc">
-            <h3>Хатха-йога</h3>
+            <h3>Кундалини-йога</h3>
             <p>
               Пн, Ср, Пт – с 12:00 до 15:00
               <br>
@@ -120,6 +156,9 @@
           </button>
         </div>
       </article>
+      <div class="kinds__more-kinds">
+        Смотреть больше
+      </div>
     </section>
   </section>
 </div>
@@ -180,7 +219,7 @@
       <div class="carousel-cell">
         <label for="tab1">
           <div class="info">
-            <img class="photo" src="./images/block-our-team-photo-instructor.svg">
+            <!--            <img class="photo" src="./images/block-our-team-photo-instructor.svg">-->
             <p>
               Инструктор
               <br>
@@ -215,7 +254,7 @@
       <div class="carousel-cell">
         <label for="tab2">
           <div class="info">
-            <img class="photo" src="./images/block-our-team-photo-instructor.svg">
+            <!--            <img class="photo" src="./images/block-our-team-photo-instructor.svg">-->
             <p>
               Инструктор
               <br>
@@ -250,7 +289,7 @@
       <div class="carousel-cell">
         <label for="tab3">
           <div class="info">
-            <img class="photo" src="./images/block-our-team-photo-instructor.svg">
+            <!--            <img class="photo" src="./images/block-our-team-photo-instructor.svg">-->
             <p>
               Инструктор
               <br>
@@ -285,7 +324,7 @@
       <div class="carousel-cell">
         <label for="tab4">
           <div class="info">
-            <img class="photo" src="./images/block-our-team-photo-instructor.svg">
+            <!--            <img class="photo" src="./images/block-our-team-photo-instructor.svg">-->
             <p>
               Инструктор
               <br>
@@ -320,7 +359,7 @@
       <div class="carousel-cell">
         <label for="tab5">
           <div class="info">
-            <img class="photo" src="./images/block-our-team-photo-instructor.svg">
+            <!--            <img class="photo" src="./images/block-our-team-photo-instructor.svg">-->
             <p>
               Инструктор
               <br>
@@ -355,7 +394,7 @@
       <div class="carousel-cell">
         <label for="tab6">
           <div class="info">
-            <img class="photo" src="./images/block-our-team-photo-instructor.svg">
+            <!--            <img class="photo" src="./images/block-our-team-photo-instructor.svg">-->
             <p>
               Инструктор
               <br>
@@ -390,7 +429,7 @@
       <div class="carousel-cell">
         <label for="tab7">
           <div class="info">
-            <img class="photo" src="./images/block-our-team-photo-instructor.svg">
+            <!--            <img class="photo" src="./images/block-our-team-photo-instructor.svg">-->
             <p>
               Инструктор
               <br>
@@ -425,7 +464,7 @@
       <div class="carousel-cell">
         <label for="tab8">
           <div class="info">
-            <img class="photo" src="./images/block-our-team-photo-instructor.svg">
+            <!--            <img class="photo" src="./images/block-our-team-photo-instructor.svg">-->
             <p>
               Инструктор
               <br>
@@ -460,7 +499,7 @@
       <div class="carousel-cell">
         <label for="tab9">
           <div class="info">
-            <img class="photo" src="./images/block-our-team-photo-instructor.svg">
+            <!--            <img class="photo" src="./images/block-our-team-photo-instructor.svg">-->
             <p>
               Инструктор
               <br>
@@ -495,7 +534,7 @@
       <div class="carousel-cell">
         <label for="tab10">
           <div class="info">
-            <img class="photo" src="./images/block-our-team-photo-instructor.svg">
+            <!--            <img class="photo" src="./images/block-our-team-photo-instructor.svg">-->
             <p>
               Инструктор
               <br>
@@ -547,7 +586,7 @@
           Спасибо инструктору Марине.
         </p>
         <div class="review__user">
-          <img class="review__photo" src="./images/block-our-team-photo-instructor.svg">
+          <!--          <img class="review__photo" src="./images/block-our-team-photo-instructor.svg">-->
           <div class="review__data-user">
             <p class="review__user-name">Серёжа Попов</p>
             <p class="review__date">16 мая 2018</p>
@@ -565,7 +604,7 @@
           Спасибо инструктору Марине.
         </p>
         <div class="review__user">
-          <img class="review__photo" src="./images/block-our-team-photo-instructor.svg">
+          <!--          <img class="review__photo" src="./images/block-our-team-photo-instructor.svg">-->
           <div class="review__data-user">
             <p class="review__user-name">Серёжа Попов</p>
             <p class="review__date">16 мая 2018</p>
@@ -583,7 +622,7 @@
           Спасибо инструктору Марине.
         </p>
         <div class="review__user">
-          <img class="review__photo" src="./images/block-our-team-photo-instructor.svg">
+          <!--          <img class="review__photo" src="./images/block-our-team-photo-instructor.svg">-->
           <div class="review__data-user">
             <p class="review__user-name">Серёжа Попов</p>
             <p class="review__date">16 мая 2018</p>
@@ -601,7 +640,7 @@
           Спасибо инструктору Марине.
         </p>
         <div class="review__user">
-          <img class="review__photo" src="./images/block-our-team-photo-instructor.svg">
+          <!--          <img class="review__photo" src="./images/block-our-team-photo-instructor.svg">-->
           <div class="review__data-user">
             <p class="review__user-name">Серёжа Попов</p>
             <p class="review__date">16 мая 2018</p>
@@ -619,7 +658,7 @@
           Спасибо инструктору Марине.
         </p>
         <div class="review__user">
-          <img class="review__photo" src="./images/block-our-team-photo-instructor.svg">
+          <!--          <img class="review__photo" src="./images/block-our-team-photo-instructor.svg">-->
           <div class="review__data-user">
             <p class="review__user-name">Серёжа Попов</p>
             <p class="review__date">16 мая 2018</p>
@@ -637,7 +676,7 @@
           Спасибо инструктору Марине.
         </p>
         <div class="review__user">
-          <img class="review__photo" src="./images/block-our-team-photo-instructor.svg">
+          <!--          <img class="review__photo" src="./images/block-our-team-photo-instructor.svg">-->
           <div class="review__data-user">
             <p class="review__user-name">Серёжа Попов</p>
             <p class="review__date">16 мая 2018</p>
@@ -655,7 +694,7 @@
           Спасибо инструктору Марине.
         </p>
         <div class="review__user">
-          <img class="review__photo" src="./images/block-our-team-photo-instructor.svg">
+          <!--          <img class="review__photo" src="./images/block-our-team-photo-instructor.svg">-->
           <div class="review__data-user">
             <p class="review__user-name">Серёжа Попов</p>
             <p class="review__date">16 мая 2018</p>
@@ -673,7 +712,7 @@
           Спасибо инструктору Марине.
         </p>
         <div class="review__user">
-          <img class="review__photo" src="./images/block-our-team-photo-instructor.svg">
+          <!--          <img class="review__photo" src="./images/block-our-team-photo-instructor.svg">-->
           <div class="review__data-user">
             <p class="review__user-name">Серёжа Попов</p>
             <p class="review__date">16 мая 2018</p>
@@ -691,7 +730,7 @@
           Спасибо инструктору Марине.
         </p>
         <div class="review__user">
-          <img class="review__photo" src="./images/block-our-team-photo-instructor.svg">
+          <!--          <img class="review__photo" src="./images/block-our-team-photo-instructor.svg">-->
           <div class="review__data-user">
             <p class="review__user-name">Серёжа Попов</p>
             <p class="review__date">16 мая 2018</p>
