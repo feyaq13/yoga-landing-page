@@ -173,13 +173,20 @@ button {
 // <-- SECTION KINDS OF YOGA
 
 .wrapper-supportive-section-kinds-of-yoga {
-  background-image: url(../images/kinds-yoga-pattern.svg);
+  //background-image: url(../images/kinds-yoga-pattern.svg);
   background-repeat: no-repeat;
   background-position: 0 35%;
 }
 
 .section-kinds-of-yoga {
   margin: 0 auto;
+  font-family: $font-montserrat;
+}
+
+.kind {
+  margin-right: 30px;
+  margin-left: 30px;
+  margin-bottom: 30px;
 }
 
 .section-kinds-of-yoga__h2 {
@@ -193,18 +200,44 @@ button {
   justify-content: center;
 }
 
+.kinds__more-kinds {
+  display: none;
+}
+
 @media (min-width: 480px) {
   .section-kinds-of-yoga__kinds {
     margin-bottom: 40px;
   }
 }
 
-.kinds {
-  margin: 0 20px 30px 20px;
+@media (min-width: 786px) {
+  .section-kinds-of-yoga__kinds {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    max-height: 500px;
+  }
+
+  .section-kinds-of-yoga__kinds > * {
+    margin: 15px 15px;
+  }
+
+  .kind:nth-child(n+2) {
+    display: flex;
+    border: 1px solid pink;
+  }
+
+  .kinds__more-kinds {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    background-color: #fff;
+  }
 }
 
-.kinds > img {
-  width: 100%;
+.kind__img {
+  max-width: 100%;
+  height: auto;
   display: block;
 }
 
@@ -233,27 +266,22 @@ button {
 .btn-kind-details {
   background: #8E80A9;
   border: none;
-  flex-grow: 1;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 639px) {
   .btn-kind-details {
     padding: 10px;
   }
 }
 
-.btn-kind-details__icon {
-  width: 15px;
-}
-
 @media (min-width: 640px) {
   .btn-kind-details__icon {
     margin: 8px;
+    width: 10px;
   }
 }
 
 .kind__desc > * {
-  font-family: $font-montserrat;
   margin-bottom: 15px;
   margin-left: 20px;
 }
@@ -265,7 +293,7 @@ button {
 // <-- SECTION TICKETS
 
 .wrapper-supportive-section-season-tickets {
-  background-image: url(../images/block-tickets-sky-pattern-big.svg);
+  //background-image: url(../images/block-tickets-sky-pattern-big.svg);
   background-repeat: no-repeat;
   background-position-x: center;
   background-position-y: 25%;
