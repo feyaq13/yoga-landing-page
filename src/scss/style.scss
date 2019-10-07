@@ -32,15 +32,23 @@ button {
 
 // <-- HEADER
 
-.wrapper-supportive-header-page {
-  background-image: url(../images/header-bg.svg);
+.header-page {
+  background-image: url(../images/header-bg@1x.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position-x: 30%;
   background-position-y: 80%;
 }
 
-.header-page {
+@media screen and (min-device-pixel-ratio: 2),
+(max-width: 360px) and (min-resolution: 144dpi),
+(max-width: 340px) and (min-resolution: 1.5dppx) {
+  .header-page {
+    background-image: url(../images/header-bg@2x.jpg);
+  }
+}
+
+.wrapper-supportive-header-page {
   height: 100vh;
   display: flex;
   flex-direction: column;
