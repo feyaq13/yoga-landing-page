@@ -178,8 +178,31 @@ button {
 }
 
 .wrapper-supportive-section-kinds-of-yoga {
-  margin: 0 auto;
-  font-family: $font-montserrat;
+  background-repeat: no-repeat;
+
+  @media (max-width: 785px){
+    background-position: 0 50%;
+    background-image: url(../images/block-kinds-yoga-pattern-bg@1x.png);
+    @media (min-device-pixel-ratio: 2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url(../images/block-kinds-yoga-pattern-bg@2x.png);
+    }
+  }
+
+  @media (min-width: 786px) {
+    background-position: 0 -15px;
+    background-image: url(../images/block-kinds-yoga-pattern-bg-786@1x.png);
+    @media (min-device-pixel-ratio: 2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url(../images/block-kinds-yoga-pattern-bg-786@2x.png);
+    }
+  }
+
+  @media (min-width: 980px) {
+    background-position: 20% 45%;
+    background-image: url(../images/block-kinds-yoga-pattern-bg-desktop@1x.png);
+    @media (min-device-pixel-ratio: 2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url(../images/block-kinds-yoga-pattern-bg-desktop@2x.png);
+    }
+  }
 }
 
 .kind {
@@ -704,6 +727,30 @@ button {
   background-repeat: no-repeat;
   background-size: cover;
   padding: 30px 40px;
+
+  @media (max-width: 360px) {
+    background-image: url(../images/footer-block-form-bg@2x.jpg);
+    @media (min-device-pixel-ratio: 2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-position: center;
+      background-image: url(../images/footer-block-form-bg@1x.jpg);
+    }
+  }
+
+  @media (min-width: 361px) {
+    background-image: url(../images/footer-block-form-bg-768@2x.jpg);
+    @media (min-device-pixel-ratio: 2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-color: #F2EEFF;
+      background-image: url(../images/footer-block-form-bg-768@1x.jpg);
+    }
+  }
+
+  @media (min-width: 800px) {
+    background-image: url(../images/footer-block-form-bg-desktop@2x.jpg);
+    @media (min-device-pixel-ratio: 2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url(../images/footer-block-form-bg-desktop@1x.jpg);
+      background-color: #F2EEFF;
+    }
+  }
 }
 
 .wrapper-section-application-form {
@@ -716,52 +763,6 @@ button {
 @media (max-width: 895px) {
   .wrapper-section-application-form {
     justify-content: center;
-  }
-}
-
-@media (max-width: 360px) {
-  .section-application-form {
-    background-position: center;
-    background-image: url(../images/footer-block-form-bg@1x.jpg);
-  }
-}
-
-
-@media (max-width: 360px) and (min-device-pixel-ratio: 2),
-(max-width: 360px) and (min-resolution: 144dpi),
-(max-width: 340px) and (min-resolution: 1.5dppx){
-  .section-application-form {
-    background-position: center;
-    background-image: url(../images/footer-block-form-bg@2x.jpg);
-  }
-}
-
-@media (min-width: 361px) {
-  .section-application-form {
-    background-color: #F2EEFF;
-    background-image: url(../images/footer-block-form-bg-768@1x.jpg);
-  }
-}
-
-@media (min-width: 361px) and (min-resolution: 144dpi),
-(min-width: 640px) and (min-resolution: 1.5dppx) {
-  .section-application-form {
-    background-image: url(../images/footer-block-form-bg-768@2x.jpg);
-  }
-}
-
-@media (min-width: 800px) {
-  .section-application-form {
-    background-image: url(../images/footer-block-form-bg-desktop@1x.jpg);
-    background-color: #F2EEFF;
-  }
-}
-
-@media (min-width: 800px) and (min-resolution: 144dpi),
-(min-width: 980px) and (min-resolution: 1.5dppx) {
-  .section-application-form {
-    background-image: url(../images/footer-block-form-bg-desktop@2x.jpg);
-    background-color: #F2EEFF;
   }
 }
 
