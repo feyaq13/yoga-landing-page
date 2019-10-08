@@ -175,6 +175,7 @@ button {
 .section-kinds-of-yoga {
   background-repeat: no-repeat;
   background-position: 0 35%;
+  font-family: $font-montserrat;
 }
 
 .wrapper-supportive-section-kinds-of-yoga {
@@ -206,8 +207,8 @@ button {
 }
 
 .kind {
-  margin-right: 30px;
-  margin-left: 30px;
+  margin-right: 15px;
+  margin-left: 15px;
   margin-bottom: 30px;
 }
 
@@ -244,11 +245,6 @@ button {
     margin: 15px 15px;
   }
 
-  .kind:nth-child(n+2) {
-    display: flex;
-    border: 1px solid pink;
-  }
-
   .kinds__more-kinds {
     display: block;
     text-align: center;
@@ -266,8 +262,32 @@ button {
 .kind-info {
   display: flex;
   flex-wrap: wrap;
-  font-size: 12px;
+  font-size: 10px;
   color: $primary-color;
+}
+
+@media (min-width: 786px) {
+  .kind_small {
+    display: flex;
+  }
+}
+
+@media (max-width: 980px) {
+  .kind_small .kind__desc > * {
+    margin-top: 10px;
+  }
+}
+
+@media (min-width: 980px) {
+  .kind_small .kind__desc > * {
+    margin: 25px;
+  }
+}
+
+@media (min-width: 980px), (max-width: 786px){
+  .kind-info {
+    font-size: 12px;
+  }
 }
 
 .kind-info p:last-child {
