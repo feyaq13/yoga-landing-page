@@ -339,11 +339,38 @@ button {
 // <-- SECTION TICKETS
 
 .wrapper-supportive-section-season-tickets {
-  //background-image: url(../images/block-tickets-sky-pattern-big.svg);
   background-repeat: no-repeat;
-  background-position-x: center;
-  background-position-y: 25%;
   background-size: cover;
+
+  @media (min-width: 980px) {
+    padding: 120px;
+    background-image: url(../images/block-tickets-sky-pattern-bg-desktop@1x.png);
+    @media (min-device-pixel-ratio: 2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      padding: 120px;
+      background-image: url(../images/block-tickets-sky-pattern-bg-desktop@2x.png);
+    }
+  }
+
+  @media (min-width: 481px) {
+    padding: 50px;
+    background-position: center;
+    background-image: url(../images/block-tickets-sky-pattern-bg-768@1x.png);
+    @media (min-device-pixel-ratio: 2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      padding: 50px;
+      background-position: center;
+      background-image: url(../images/block-tickets-sky-pattern-bg-768@2x.png);
+    }
+  }
+
+  @media (max-width: 480px) {
+    background-position: center;
+    background-image: url(../images/block-tickets-sky-pattern-bg@1x.png);
+    @media (min-device-pixel-ratio: 2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-position: center;
+      background-image: url(../images/block-tickets-sky-pattern-bg@2x.png);
+    }
+  }
+
 }
 
 .section-season-tickets__tickets {
@@ -547,12 +574,6 @@ button {
 }
 
 @media (min-width: 769px) {
-  .wrapper-supportive-section-season-tickets {
-    background-size: 40%;
-    background-position-y: 25%;
-  }
-
-  // <-- service styles for flickity's carousel
   .cell {
     position: static !important;
     left: 0 !important;
