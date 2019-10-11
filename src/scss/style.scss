@@ -28,6 +28,7 @@ h3 {
 button {
   cursor: pointer;
 }
+
 // COMMON -->
 
 // <-- HEADER
@@ -101,7 +102,7 @@ button {
 }
 
 
-.list__list-item  {
+.list__list-item {
   margin: 10px;
   list-style-type: none;
 }
@@ -163,9 +164,9 @@ button {
   text-decoration: none;
   color: $coral-color;
 
-    &:hover {
-      text-decoration: underline;
-    }
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 // HEADER -->
@@ -182,7 +183,7 @@ button {
 .wrapper-supportive-section-kinds-of-yoga {
   background-repeat: no-repeat;
 
-  @media (max-width: 785px){
+  @media (max-width: 785px) {
     background-position: 0 55%;
     background-image: url(../images/block-kinds-yoga-pattern-bg@1x.png);
     @media (min-device-pixel-ratio: 2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
@@ -288,7 +289,7 @@ button {
   }
 }
 
-@media (min-width: 980px), (max-width: 786px){
+@media (min-width: 980px), (max-width: 786px) {
   .kind-info {
     font-size: 12px;
   }
@@ -395,7 +396,7 @@ button {
 
 .season-tickets__h2 {
   text-align: center;
-  padding-bottom: 20px;
+  padding-bottom: 35px;
 }
 
 .ticket-desc > * {
@@ -526,11 +527,11 @@ button {
   background-color: #8E80A9;
 }
 
-.section-our-team .previous{
+.section-our-team .previous {
   left: -20px;
 }
 
-.section-our-team .next  {
+.section-our-team .next {
   right: -20px;
 }
 
@@ -640,7 +641,7 @@ button {
     left: 400px;
   }
 
-  .cell :checked ~ .experience{
+  .cell :checked ~ .experience {
     display: block;
   }
 }
@@ -717,25 +718,25 @@ button {
 
 @media (min-width: 640px) {
   .review {
-    width: calc((100% - 15px)/2);
+    width: calc((100% - 15px) / 2);
   }
 }
 
 @media (min-width: 960px) {
   .review {
-    width: calc((100% - 25px)/3);
+    width: calc((100% - 25px) / 3);
   }
 }
 
 @media (min-width: 1280px) {
   .review {
-    width: calc((100% - 35px)/4);
+    width: calc((100% - 35px) / 4);
   }
 }
 
 @media (min-width: 1440px) {
   .review {
-    width: calc((100% - 45px)/5);
+    width: calc((100% - 45px) / 5);
   }
 }
 
