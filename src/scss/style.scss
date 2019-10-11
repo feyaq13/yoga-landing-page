@@ -500,7 +500,7 @@ button {
   justify-content: space-between;
   background-color: #fff;
   box-shadow: 0 0 3px 0 #e5e5e5;
-  margin: 0 10px 25px 10px;
+  margin: 5px 10px 20px 10px;
   font-family: $font-montserrat;
 }
 
@@ -627,7 +627,10 @@ button {
     display: flex;
     align-items: flex-start;
     margin-left: 30px;
-    margin-top: 30px;
+  }
+
+  .cell:not(:first-child) {
+    margin-top: 50px;
   }
 
   @media (min-width: 640px) {
@@ -683,7 +686,7 @@ button {
   .experience {
     position: absolute;
     display: none;
-    top: 20px;
+    top: 0;
     left: 400px;
   }
 
@@ -697,9 +700,7 @@ button {
 // <-- REVIEWS
 
 .section-reviews {
-  margin-left: 20px;
-  margin-right: 20px;
-  margin-bottom: 35px;
+  margin: 0 20px 50px 20px;
   font-family: $font-montserrat;
 }
 
