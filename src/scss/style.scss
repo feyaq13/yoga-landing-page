@@ -771,32 +771,39 @@ button {
 .section-application-form {
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 30px 40px;
+
+
+  @media (max-width: 767px) {
+    padding: 100px 40px;
+    background-image: url(../images/footer-block-form-bg-768@2x.jpg);
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      padding: 100px 40px;
+      background-image: url(../images/footer-block-form-bg-768@1x.jpg);
+    }
+  }
 
   @media (max-width: 360px) {
     background-image: url(../images/footer-block-form-bg@2x.jpg);
+    background-position: center;
+
     @media (min-device-pixel-ratio: 2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
       background-position: center;
       background-image: url(../images/footer-block-form-bg@1x.jpg);
     }
   }
 
-  @media (min-width: 361px) {
-    background-image: url(../images/footer-block-form-bg-768@2x.jpg);
-    @media (min-device-pixel-ratio: 2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-      background-color: #F2EEFF;
-      background-image: url(../images/footer-block-form-bg-768@1x.jpg);
-    }
-  }
-
-  @media (min-width: 800px) {
+  @media (min-width: 768px) {
+    padding: 100px 40px;
     background-image: url(../images/footer-block-form-bg-desktop@2x.jpg);
+
     @media (min-device-pixel-ratio: 2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      padding: 100px 40px;
       background-image: url(../images/footer-block-form-bg-desktop@1x.jpg);
-      background-color: #F2EEFF;
     }
   }
 }
+
 
 .wrapper-section-application-form {
   display: flex;
@@ -881,7 +888,7 @@ button {
 
   .footer__contacts {
     position: absolute;
-    top: 20%;
+    top: 30%;
   }
 
   .contacts {
@@ -898,7 +905,7 @@ button {
 
   .social-links {
     position: absolute;
-    top: 50%;
+    top: 55%;
   }
 
   .icon path {
