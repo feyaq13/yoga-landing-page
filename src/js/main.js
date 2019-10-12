@@ -1,8 +1,5 @@
 const $ = require('jquery');
 const Flickity = require('flickity');
-const jQueryBridget = require('jquery-bridget');
-
-jQueryBridget('flickity', Flickity, $);
 
 var carouselContainers = document.querySelectorAll('.carousel-container');
 
