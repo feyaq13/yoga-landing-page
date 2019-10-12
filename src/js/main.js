@@ -1,64 +1,62 @@
+import { commonCarouselConfig, scrollTopAnimationDurationMs } from './configs';
+import { hamburgerMenu } from './hamburger';
+
 const $ = require('jquery');
 const Flickity = require('flickity');
 
 var carouselContainers = document.querySelectorAll('.carousel-container');
 
-const $teamCarousel = initCarouselContainer( carouselContainers[0], {
-  draggable: true,
+const $teamCarousel = initCarouselContainer(carouselContainers[0], {
+  ...commonCarouselConfig,
   pageDots: false,
-  resize: true,
-  adaptiveHeight: true,
-  setGallerySize: false
+  resize: true
 });
 
-initCarouselContainer( carouselContainers[1], {
+hamburgerMenu.init();
+
+initCarouselContainer(carouselContainers[1], {
+  ...commonCarouselConfig,
   groupCells: true,
-  contain: true,
-  draggable: true,
-  adaptiveHeight: true,
-  setGallerySize: false
+  contain: true
 });
 
-function initCarouselContainer( container, options ) {
-  var carousel = container.querySelector('.carousel');
+function initCarouselContainer (container, options) {
+  const carousel = container.querySelector('.carousel');
 
-  var flkty = new Flickity( carousel, {
+  const flkty = new Flickity(carousel, {
     ...options
   });
 
-  var carouselStatus = container.querySelector('.carousel__carousel-status');
+  const carouselStatus = container.querySelector('.carousel__carousel-status');
   const flickityBtn = container.querySelector('.previous');
+  updateCarouselPages(flkty, carouselStatus, flickityBtn);
 
-  function updateStatus() {
-    var slideNumber = flkty.selectedIndex + 1;
-    carouselStatus.textContent = slideNumber + '/' + flkty.slides.length
-    flickityBtn.after(carouselStatus);
-  }
+  flkty.on('select', () => {
+    updateCarouselPages(flkty, carouselStatus, flickityBtn);
+  });
 
-  updateStatus();
-  flkty.on( 'select', updateStatus );
-
-  return flkty
+  return flkty;
 }
 
-const teamFlkty = $teamCarousel;
+function updateCarouselPages (flkty, carouselStatus, flickityBtn) {
+  carouselStatus.textContent = `${flkty.selectedIndex + 1}/${flkty.slides.length}`;
+  flickityBtn.after(carouselStatus);
+}
+
 let childrenSlider = $('.section-our-team__carousel-team .flickity-slider').children();
 
-$(document).ready(function () {
+$(function () {
   $('.navigation__list').on('click', 'a', function (event) {
-    event.preventDefault();
-
     const listItem = $(this).attr('href');
     const top = $(listItem).offset().top;
+    event.preventDefault();
 
-    $('body,html').animate({ scrollTop: top }, 1000);
+    $('body,html').animate(
+      { scrollTop: top },
+      scrollTopAnimationDurationMs
+    );
   });
 });
-
-const btnNavTrigger = document.querySelector('.btn-nav-trigger');
-btnNavTrigger.addEventListener('mouseenter', enterHamburger);
-btnNavTrigger.addEventListener('mouseleave', leaveHamburger);
-document.addEventListener('click', handlerMenu);
 
 $(window).on('load resize', function () {
   setupMarginTop();
@@ -70,7 +68,7 @@ $(window).on('load resize', function () {
     showRegroupingCells();
   }
 
-  $teamCarousel.reloadCells()
+  $teamCarousel.reloadCells();
   $('.section-our-team .flickity-viewport').outerHeight($('.carousel-cell').outerHeight());
   $('.section-reviews .flickity-viewport').outerHeight($('.review').outerHeight());
 });
@@ -86,36 +84,10 @@ function setupInheritWidth () {
   child.style.maxWidth = widthParent;
 }
 
-function enterHamburger () {
-  this.children[2].style.width = '50%';
-}
-
-function leaveHamburger () {
-  this.children[2].style.width = '';
-}
-
-function handlerMenu (e) {
-  const target = e.target;
-  const navBar = document.querySelector('.header-page__navigation');
-  const navList = document.querySelector('.navigation__list');
-
-  if (navBar.contains(target) && !target.classList.contains('phone')) {
-    if (navList.classList.contains('open')) {
-      navList.classList.replace('open', 'close');
-    } else {
-      navList.classList.replace('close', 'open');
-    }
-  } else {
-    navList.classList.replace('open', 'close');
-  }
-}
-
 function showGroupingCells () {
-
   if (childrenSlider.length === 0) {
     childrenSlider = $('.section-our-team__carousel-team .flickity-slider').children();
   } else if ($('.carousel-cell').length !== 4) {
-
     $teamCarousel.cells.forEach(function (cell) {
       cell.element.classList.value = 'cell';
     });
@@ -130,7 +102,6 @@ function showGroupingCells () {
 }
 
 function showRegroupingCells () {
-
   if ($('.carousel-cell').length !== 10) {
     const DetachedChildren = $('.carousel-cell').children().detach();
     $('.carousel-cell').detach();
