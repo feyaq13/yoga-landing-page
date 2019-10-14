@@ -430,6 +430,10 @@ button {
   padding: 20px 30px;
   flex-basis: 250px;
   transition: transform .2s ease-in-out;
+  
+  @media (min-width: 768px) {
+    margin-bottom: 0;
+  }
 }
 
 .tickets__ticket:hover {
