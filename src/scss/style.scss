@@ -192,16 +192,18 @@ button {
     background-position: 0 55%;
     background-image: url(../images/block-kinds-yoga-pattern-bg@1x.png);
     @media (min-device-pixel-ratio: 2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-size: contain;
       background-position: 0 55%;
       background-image: url(../images/block-kinds-yoga-pattern-bg@2x.png);
     }
   }
 
   @media (min-width: 786px) {
-    background-position: 15% -30%;
+    background-position: 15% -5%;
     background-image: url(../images/block-kinds-yoga-pattern-bg-786@1x.png);
     @media (min-device-pixel-ratio: 2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-      background-position: 15% -30%;
+      background-size: cover;
+      background-position: 15% 25%;
       background-image: url(../images/block-kinds-yoga-pattern-bg-786@2x.png);
     }
   }
@@ -210,7 +212,7 @@ button {
     background-position: 20% 40%;
     background-image: url(../images/block-kinds-yoga-pattern-bg-desktop@1x.png);
     @media (min-device-pixel-ratio: 2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-      background-position: 20% 40%;
+      background-position: 0 40%;
       background-image: url(../images/block-kinds-yoga-pattern-bg-desktop@2x.png);
     }
   }
