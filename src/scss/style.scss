@@ -3,6 +3,7 @@ $font-montserrat: 'Montserrat', sans-serif;
 $font-caveat: 'Caveat', cursive;
 $primary-color: #8E80A9;
 $coral-color: #E65C7B;
+$paddingForPositionOurTeam: 20px;
 
 * {
   margin: 0;
@@ -464,6 +465,7 @@ button {
 .section-our-team {
   font-family: $font-montserrat;
   background-repeat: no-repeat;
+  background-size: contain;
 
   &,
   & .flickity-viewport {
@@ -472,32 +474,26 @@ button {
 
   @media (min-width: 981px) {
     padding: 90px;
-    background-size: auto;
     background-image: url(../images/block-our-team-pattern-bg-desktop@1x.png);
     @media (min-device-pixel-ratio: 2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
       padding: 90px;
-      background-size: cover;
       background-image: url(../images/block-our-team-pattern-bg-desktop@2x.png);
     }
   }
 
   @media (max-width: 980px) {
-    background-size: contain;
     background-position: left top;
     background-image: url(../images/block-our-team-pattern-bg-768@1x.png);
     @media (min-device-pixel-ratio: 2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-      background-size: contain;
       background-position: left top;
       background-image: url(../images/block-our-team-pattern-bg-768@2x.png);
     }
   }
 
   @media (max-width: 480px) {
-    background-size: auto;
     background-position: left top;
     background-image: url(../images/block-our-team-pattern-bg@1x.png);
     @media (min-device-pixel-ratio: 2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-      background-size: cover;
       background-position: left top;
       background-image: url(../images/block-our-team-pattern-bg@2x.png);
     }
@@ -523,10 +519,18 @@ button {
   box-shadow: 0 0 3px 0 #e5e5e5;
   margin: 5px 10px 20px 10px;
   font-family: $font-montserrat;
+  cursor: pointer;
 }
 
 .social-links__icon {
   width: 18px;
+  border-bottom: 1px solid transparent;
+  transition: all .3s ease-in-out;
+}
+
+.social-links__icon:hover {
+  padding-bottom: 3px;
+  border-bottom: 1px solid $primary-color;
 }
 
 .info > p {
@@ -631,13 +635,13 @@ button {
     display: none;
   }
 
-  .social-links__icon:not(:last-child) {
-    margin-bottom: 25px;
-  }
-
   .social-links__icon {
     display: block;
     margin-right: 20px;
+
+    &:not(:last-child) {
+      margin-bottom: 25px;
+    }
   }
 }
 
@@ -648,10 +652,7 @@ button {
     display: flex;
     align-items: flex-start;
     margin-left: 30px;
-  }
-
-  .cell:not(:first-child) {
-    margin-top: 50px;
+    padding-top: $paddingForPositionOurTeam;
   }
 
   @media (min-width: 640px) {
@@ -696,6 +697,11 @@ button {
     border-bottom: 2px solid;
     padding-bottom: 2px;
     background: transparent;
+    transition: transform .3s ease-in-out;
+
+    &:hover {
+      transform: scale(1.2);
+    }
   }
 
   .photo {
@@ -709,6 +715,7 @@ button {
     display: none;
     top: 0;
     left: 400px;
+    padding-top: $paddingForPositionOurTeam;
   }
 
   .cell :checked ~ .experience {
