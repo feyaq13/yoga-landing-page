@@ -147,6 +147,7 @@ button {
   font-family: $font-caveat;
   text-align: center;
   font-size: 18px;
+  font-weight: 500;
   padding-bottom: 10px;
 }
 
@@ -199,7 +200,7 @@ button {
   background-repeat: no-repeat;
   background-position: 0 35%;
   font-family: $font-montserrat;
-  padding: 30px 0;
+  padding-top: 30px;
 }
 
 .wrapper-supportive-section-kinds-of-yoga {
@@ -226,10 +227,10 @@ button {
   }
 
   @media (min-width: 980px) {
-    background-position: 20% 40%;
+    background-position: 0 35%;
     background-image: url(../images/block-kinds-yoga-pattern-bg-desktop@1x.png);
     @media (min-device-pixel-ratio: 2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-      background-position: 0 40%;
+      background-position: 0 35%;
       background-image: url(../images/block-kinds-yoga-pattern-bg-desktop@2x.png);
     }
   }
@@ -368,11 +369,11 @@ button {
   background-size: cover;
 
   @media (min-width: 980px) {
-    padding: 120px;
+    padding: 100px 0;
     background-image: url(../images/block-tickets-sky-pattern-bg-desktop@1x.png);
     background-position: center;
     @media (min-device-pixel-ratio: 2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-      padding: 120px;
+      padding: 100px 0;
       background-image: url(../images/block-tickets-sky-pattern-bg-desktop@2x.png);
     }
   }
@@ -473,10 +474,10 @@ button {
   }
 
   @media (min-width: 981px) {
-    padding: 90px;
+    padding-bottom: 100px;
     background-image: url(../images/block-our-team-pattern-bg-desktop@1x.png);
     @media (min-device-pixel-ratio: 2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-      padding: 90px;
+      padding-bottom: 100px;
       background-image: url(../images/block-our-team-pattern-bg-desktop@2x.png);
     }
   }
@@ -551,7 +552,12 @@ button {
   font-family: $font-montserrat;
   font-size: 12px;
   margin: 0 10px;
+
+  @media (max-width: 786px) {
+    font-size: 11px;
+  }
 }
+
 
 .experience__heading {
   color: $coral-color;
