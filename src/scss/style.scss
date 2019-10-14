@@ -353,13 +353,14 @@ button {
   @media (min-width: 980px) {
     padding: 120px;
     background-image: url(../images/block-tickets-sky-pattern-bg-desktop@1x.png);
+    background-position: center;
     @media (min-device-pixel-ratio: 2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
       padding: 120px;
       background-image: url(../images/block-tickets-sky-pattern-bg-desktop@2x.png);
     }
   }
 
-  @media (min-width: 481px) {
+  @media (min-width: 481px) and (max-width: 979px){
     padding: 50px;
     background-position: center;
     background-image: url(../images/block-tickets-sky-pattern-bg-768@1x.png);
