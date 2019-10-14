@@ -71,9 +71,7 @@ button {
   @media (max-width: 480px) {
     background-image: url(../images/header-bg@1x.png);
 
-    @media (min-device-pixel-ratio: 2),
-    (min-resolution: 144dpi),
-    (min-resolution: 1.5dppx) {
+    @media (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
       background-image: url(../images/header-bg@2x.png);
     }
   }
@@ -81,9 +79,7 @@ button {
   @media (min-width: 481px) and (max-width: 768px) {
     background-image: url(../images/header-bg-768@1x.png);
 
-    @media (min-device-pixel-ratio: 2),
-    (min-resolution: 144dpi),
-    (min-resolution: 1.5dppx) {
+    @media (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
       background-image: url(../images/header-bg-768@2x.png);
     }
   }
@@ -237,7 +233,7 @@ button {
   @media (max-width: 785px) {
     background-position: 0 55%;
     background-image: url(../images/block-kinds-yoga-pattern-bg@1x.png);
-    @media (min-device-pixel-ratio: 2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    @media (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
       background-size: contain;
       background-position: 0 55%;
       background-image: url(../images/block-kinds-yoga-pattern-bg@2x.png);
@@ -247,7 +243,7 @@ button {
   @media (min-width: 786px) {
     background-position: 15% -5%;
     background-image: url(../images/block-kinds-yoga-pattern-bg-786@1x.png);
-    @media (min-device-pixel-ratio: 2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    @media (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
       background-size: cover;
       background-position: 15% 25%;
       background-image: url(../images/block-kinds-yoga-pattern-bg-786@2x.png);
@@ -257,7 +253,7 @@ button {
   @media (min-width: 980px) {
     background-position: 0 35%;
     background-image: url(../images/block-kinds-yoga-pattern-bg-desktop@1x.png);
-    @media (min-device-pixel-ratio: 2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    @media (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
       background-position: 0 35%;
       background-image: url(../images/block-kinds-yoga-pattern-bg-desktop@2x.png);
     }
@@ -394,7 +390,7 @@ button {
   @media (min-width: 980px) {
     padding: 100px 0;
     background-image: url(../images/block-tickets-sky-pattern-bg-desktop@1x.png);
-    @media (min-device-pixel-ratio: 2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    @media (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
       padding: 100px 0;
       background-image: url(../images/block-tickets-sky-pattern-bg-desktop@2x.png);
     }
@@ -402,14 +398,14 @@ button {
 
   @media (min-width: 481px) and (max-width: 979px) {
     background-image: url(../images/block-tickets-sky-pattern-bg-768@1x.png);
-    @media (min-device-pixel-ratio: 2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    @media (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
       background-image: url(../images/block-tickets-sky-pattern-bg-768@2x.png);
     }
   }
 
   @media (max-width: 480px) {
     background-image: url(../images/block-tickets-sky-pattern-bg@1x.png);
-    @media (min-device-pixel-ratio: 2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    @media (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
       background-image: url(../images/block-tickets-sky-pattern-bg@2x.png);
     }
   }
@@ -496,7 +492,7 @@ button {
 
   @media (min-width: 981px) {
     background-image: url(../images/block-our-team-pattern-bg-desktop@1x.png);
-    @media (min-device-pixel-ratio: 2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    @media (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
       background-image: url(../images/block-our-team-pattern-bg-desktop@2x.png);
     }
   }
@@ -504,7 +500,7 @@ button {
   @media (max-width: 980px) {
     background-position: left top;
     background-image: url(../images/block-our-team-pattern-bg-768@1x.png);
-    @media (min-device-pixel-ratio: 2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    @media (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
       background-position: left top;
       background-image: url(../images/block-our-team-pattern-bg-768@2x.png);
     }
@@ -513,7 +509,7 @@ button {
   @media (max-width: 480px) {
     background-position: left top;
     background-image: url(../images/block-our-team-pattern-bg@1x.png);
-    @media (min-device-pixel-ratio: 2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    @media (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
       background-position: left top;
       background-image: url(../images/block-our-team-pattern-bg@2x.png);
     }
@@ -899,7 +895,7 @@ button {
     padding: 60px 40px;
     background-image: url(../images/footer-block-form-bg-768@2x.jpg);
 
-    @media (min-device-pixel-ratio: 2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    @media (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
       padding: 60px 40px;
       background-image: url(../images/footer-block-form-bg-768@1x.jpg);
     }
@@ -908,7 +904,7 @@ button {
   @media (max-width: 360px) {
     background-image: url(../images/footer-block-form-bg@2x.jpg);
 
-    @media (min-device-pixel-ratio: 2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    @media (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
       background-image: url(../images/footer-block-form-bg@1x.jpg);
     }
   }
@@ -917,7 +913,7 @@ button {
     padding: 100px 40px;
     background-image: url(../images/footer-block-form-bg-desktop@2x.jpg);
 
-    @media (min-device-pixel-ratio: 2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    @media (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
       padding: 100px 40px;
       background-image: url(../images/footer-block-form-bg-desktop@1x.jpg);
     }
