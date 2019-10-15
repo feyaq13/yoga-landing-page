@@ -85,9 +85,11 @@ button {
   }
 
   @media (min-width: 869px) {
+    background-position: 0 90%;
     background-image: url(../images/header-bg-desktop@1x.png);
 
     @media (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-position: 0 90%;
       background-image: url(../images/header-bg-desktop@2x.png);
     }
   }
@@ -101,11 +103,11 @@ button {
   margin: auto;
 
   @media (max-width: 480px) {
-    height: 45vh;
+    height: 50vh;
   }
 
   @media (min-width: 481px) and (max-width: 868px) {
-    height: 60vh;
+    height: 70vh;
   }
 
   @media (min-width: 869px) {
@@ -178,14 +180,6 @@ button {
 
 .header-page__main-content {
   transform: translate(0, -50%);
-
-  //@media (min-width: 481px) and (max-width: 868px) {
-  //  //padding: 100px 0;
-  //}
-  //
-  //@media (min-width: 869px) {
-  //  padding: 100px 0;
-  //}
 }
 
 .main-headings__h2 {
@@ -194,6 +188,14 @@ button {
   font-size: 18px;
   font-weight: 500;
   padding-bottom: 10px;
+
+  @media (min-width: 868px) {
+    font-size: 25px;
+  }
+
+  @media (min-width: 980px) {
+    font-size: 35px;
+  }
 }
 
 .main-headings__h1 {
