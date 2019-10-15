@@ -244,48 +244,50 @@ button {
 // <-- SECTION KINDS OF YOGA
 
 .section-kinds-of-yoga {
-  background-repeat: no-repeat;
-  background-position: 0 35%;
   font-family: $font-montserrat;
 }
 
 .wrapper-supportive-section-kinds-of-yoga {
   background-repeat: no-repeat;
+  max-width: 1250px;
+  margin: auto;
 
   @media (max-width: 785px) {
+    background-size: 200px;
     background-position: 0 55%;
     background-image: url(../images/block-kinds-yoga-pattern-bg@1x.png);
     @media (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-
       background-size: 200px;
       background-position: 0 55%;
-
       background-image: url(../images/block-kinds-yoga-pattern-bg@2x.png);
     }
   }
 
   @media (min-width: 786px) {
-    background-position: 15% -5%;
+    background-size: 800px;
+    background-position: 40% 50%;
     background-image: url(../images/block-kinds-yoga-pattern-bg-786@1x.png);
     @media (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-
-      background-size: cover;
-      background-position: -40%;
-
+      background-size: 800px;
+      background-position: 40% 50%;
       background-image: url(../images/block-kinds-yoga-pattern-bg-786@2x.png);
     }
   }
 
   @media (min-width: 980px) {
-    background-position: 0 20%;
+    background-size: 1190px;
+    background-position: 100% 45%;
     background-image: url(../images/block-kinds-yoga-pattern-bg-desktop@1x.png);
     @media (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-
-      background-size: 1150px;
-      background-position: -50px;
-
+      background-size: 1080px;
+      background-position: 40% 50%;
       background-image: url(../images/block-kinds-yoga-pattern-bg-desktop@2x.png);
     }
+  }
+
+  @media (min-width: 980px) and (max-width: 1240px) {
+    background-position: 30% 45%;
+    background-size: 1160px;
   }
 }
 
