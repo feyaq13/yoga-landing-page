@@ -429,8 +429,10 @@ button {
   }
 
   @media (min-width: 481px) and (max-width: 979px) {
+    padding: 30px 0;
     background-image: url(../images/block-tickets-sky-pattern-bg-768@1x.png);
     @media (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      padding: 30px 0;
       background-image: url(../images/block-tickets-sky-pattern-bg-768@2x.png);
     }
   }
@@ -491,7 +493,7 @@ button {
 
 .ticket-time {
   color: $coral-color;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .ticket-price {
@@ -507,7 +509,12 @@ button {
   color: #fff;
   font-family: $font-montserrat;
   font-size: 14px;
+
+  &:hover {
+    background: darken($primary-color, 10%);
+  }
 }
+
 
 // SECTION TICKETS -->
 
