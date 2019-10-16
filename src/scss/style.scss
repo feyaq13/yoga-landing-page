@@ -310,8 +310,15 @@ button {
 
 .kinds__more-kinds {
   display: none;
+  @media (min-width: 786px) {
+      display: block;
+      color: $primary-color;
+      text-align: center;
+      padding: 10px;
+      font-size: 14px;
+      background-color: #fff;
+  }
 }
-
 
 @media (min-width: 786px) {
   .section-kinds-of-yoga__kinds {
@@ -323,13 +330,6 @@ button {
 
   .section-kinds-of-yoga__kinds > * {
     margin: 15px;
-  }
-
-  .kinds__more-kinds {
-    display: block;
-    text-align: center;
-    padding: 10px;
-    background-color: #fff;
   }
 }
 
@@ -344,55 +344,62 @@ button {
   flex-wrap: wrap;
   font-size: 10px;
   color: $primary-color;
+
+  @media (min-width: 980px) {
+    font-size: 13px;
+  }
+
+  & p:last-child {
+    color: $coral-color;
+  }
+
+  &:last-child {
+    justify-content: center;
+  }
+}
+
+.kind__desc {
+  flex-grow: 1;
+  padding-right: 20px;
+  padding-left: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 5px 0 #e5e5e5;
+
+  @media (max-width: 785px) {
+    & > * {
+      margin-bottom: 10px;
+      margin-top: 10px;
+    }
+  }
+
+}
+
+.kind_big, .kind_small {
+  transition: all .3s ease-out;
 }
 
 @media (min-width: 786px) {
   .kind_small {
     display: flex;
   }
+
+  .kind_big .kind__desc > * {
+    margin-top: 18px;
+    margin-bottom: 18px;
+  }
 }
 
-@media (min-width: 786px) {
+@media (min-width: 980px) {
+  .kind_small .kind__desc > * {
+    margin-top: 23px;
+    margin-bottom: 23px;
+  }
+}
+
+@media (min-width: 786px) and (max-width: 979px) {
   .kind_small .kind__desc > * {
     margin-top: 13px;
     margin-bottom: 13px;
-  }
-}
-
-@media (min-width: 980px), (max-width: 786px) {
-  .kind-info {
-    font-size: 12px;
-  }
-}
-
-.kind-info p:last-child {
-  color: $coral-color;
-}
-
-.kind-info:last-child {
-  justify-content: center;
-}
-
-.kind__desc {
-  flex-grow: 1;
-  padding-right: 20px;
-  background-color: #fff;
-  box-shadow: 0 0 5px 0 #e5e5e5;
-}
-
-@media (max-width: 785px) {
-  .kind__desc > * {
-    margin-bottom: 10px;
-    margin-left: 20px;
-    margin-top: 10px;
-  }
-}
-
-@media (min-width: 786px) {
-  .kind__desc > * {
-    margin-bottom: 18.5px;
-    margin-left: 20px;
-    margin-top: 18.5px;
   }
 }
 
@@ -542,7 +549,6 @@ button {
       margin-right: auto;
     }
   }
-
 
   @media (min-width: 981px) {
     background-image: url(../images/block-our-team-pattern-bg-desktop@1x.png);
@@ -814,6 +820,7 @@ button {
   .experience {
     //display: none;
     opacity: 0;
+    transition: opacity .5s ease-out;
   }
 
   .experience__wrapper {
