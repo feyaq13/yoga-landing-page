@@ -3,7 +3,7 @@ $font-montserrat: 'Montserrat', sans-serif;
 $font-caveat: 'Caveat', cursive;
 $primary-color: #8E80A9;
 $coral-color: #E65C7B;
-$paddingForPositionOurTeam: 20px;
+$paddingForPositionOurTeam: 30px;
 
 * {
   margin: 0;
@@ -468,7 +468,9 @@ button {
     margin-bottom: 0;
   }
   @media (max-width: 480px) {
-    margin-bottom: 0;
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -527,10 +529,20 @@ button {
   font-family: $font-montserrat;
   background-repeat: no-repeat;
   background-size: contain;
+  position: relative;
 
   & .flickity-viewport {
     margin-bottom: 50px;
   }
+
+  @media (min-width: 769px) {
+    .wrapper-supportive-section-our-team {
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
 
   @media (min-width: 981px) {
     background-image: url(../images/block-our-team-pattern-bg-desktop@1x.png);
@@ -594,7 +606,7 @@ button {
   }
 }
 
-.photo {
+.section-reviews .photo {
   display: block;
   margin-right: 15px;
   @media (max-width: 480px) {
@@ -621,10 +633,6 @@ button {
   width: 15px;
 
   @media (min-width: 769px) {
-    &:hover {
-      padding-bottom: 3px;
-      border-bottom: 1px solid $primary-color;
-    }
     &:not(:last-child) {
       margin-right: 10px;
     }
@@ -664,7 +672,7 @@ button {
 .experience {
   font-family: $font-montserrat;
   font-size: 12px;
-  margin: 0 10px;
+  margin-left: 10px;
   @media (max-width: 868px) {
     font-size: 11px;
   }
@@ -736,7 +744,8 @@ button {
 
 @media (max-width: 480px) {
   .section-our-team .photo {
-    height: 60px;
+    width: 60px;
+    margin-right: 20px;
   }
 }
 
@@ -747,12 +756,11 @@ button {
 }
 
 @media (min-width: 769px) {
+
   .cell {
     position: static !important;
     left: 0 !important;
     display: flex;
-    align-items: flex-start;
-    margin-left: 30px;
     padding-top: $paddingForPositionOurTeam;
   }
 
@@ -773,11 +781,16 @@ button {
   .info {
     padding-right: 20px;
     min-width: 300px;
+    height: 60px;
 
     & > p {
       font-size: 10px;
       line-height: 1.5;
     }
+  }
+
+  .section-reviews .photo {
+    height: 45px;
   }
 
   .info__social-links {
@@ -795,19 +808,24 @@ button {
   .photo_pos-left {
     position: relative;
     left: -10px;
-    bottom: 10px;
+    bottom: 20px;
   }
 
   .experience {
+    //display: none;
+    opacity: 0;
+  }
+
+  .experience__wrapper {
     position: absolute;
-    display: none;
+    margin-left: 30px;
     top: 0;
-    left: 430px;
     padding-top: $paddingForPositionOurTeam;
   }
 
   .cell :checked ~ .experience {
-    display: block;
+    //display: block;
+    opacity: 1;
   }
 }
 
