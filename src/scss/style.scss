@@ -612,16 +612,6 @@ button {
   }
 }
 
-.section-reviews .photo {
-  display: block;
-  margin-right: 15px;
-  @media (max-width: 480px) {
-    height: (82px/2);
-    width: auto;
-  }
-}
-
-
 @media (max-width: 767px) {
   .icons {
     margin-right: 10px;
@@ -730,6 +720,11 @@ button {
 .carousel-cell {
   margin-right: 20px;
   width: 100%;
+  transition: opacity .5s ease-in-out, width .5s ease-in-out;
+
+  &:not(.is-selected) {
+    opacity: 0;
+  }
 }
 
 // service styles for flickity's carousel -->
@@ -825,7 +820,7 @@ button {
 
   .experience__wrapper {
     position: absolute;
-    margin-left: 30px;
+    margin-left: 10px;
     top: 0;
     padding-top: $paddingForPositionOurTeam;
   }
@@ -841,17 +836,12 @@ button {
 // <-- REVIEWS
 
 .section-reviews {
-  margin: 0 20px 60px 20px;
+  margin-bottom: 50px;
   font-family: $font-montserrat;
 }
 
-
 .section-reviews__h2 {
   text-align: center;
-}
-
-.section-reviews .flickity-viewport {
-  margin-bottom: 25px;
 }
 
 .section-reviews .previous,
@@ -862,7 +852,7 @@ button {
 }
 
 .section-reviews .carousel__carousel-status {
-  top: -5px;
+  top: -10px;
 }
 
 @media (min-width: 320px) {
@@ -886,36 +876,51 @@ button {
 }
 
 .review {
-  width: 100%;
+  width: 90%;
+  min-height: 200px;
+  margin: 50px auto;
   margin-right: 15px;
   background-color: #fff;
   box-shadow: 0 0 4px #e5e5e5;
   font-size: 12px;
-  padding: 15px;
-  bottom: 0;
+  transition: opacity .5s ease-in-out;
+}
+
+.review > * {
+  margin: 15px;
+}
+
+.review:not(.is-selected) {
+  opacity: 0;
+}
+
+.section-reviews .photo {
+  display: block;
+  margin-right: 15px;
+  width: 41px;
 }
 
 @media (min-width: 640px) {
   .review {
-    width: calc((100% - 15px) / 2);
+    width: 45%;
   }
 }
 
-@media (min-width: 960px) {
+@media (min-width: 980px) {
   .review {
-    width: calc((100% - 25px) / 3);
+    width: 30%;
   }
 }
 
 @media (min-width: 1280px) {
   .review {
-    width: calc((100% - 35px) / 4);
+    width: 22.5%;
   }
 }
 
 @media (min-width: 1440px) {
   .review {
-    width: calc((100% - 45px) / 5);
+    width: 18%;
   }
 }
 

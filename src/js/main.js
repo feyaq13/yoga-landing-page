@@ -17,7 +17,6 @@ hamburgerMenu.init();
 initCarouselContainer(carouselContainers[1], {
   ...commonCarouselConfig,
   groupCells: true,
-  contain: true
 });
 
 function initCarouselContainer (container, options) {
@@ -76,7 +75,7 @@ $(window).on('load resize', function () {
   );
 
   $('.section-our-team .flickity-viewport').outerHeight($('.carousel-cell').outerHeight());
-  $('.section-reviews .flickity-viewport').outerHeight($('.review').outerHeight());
+  $('.section-reviews .flickity-viewport').outerHeight($('.review').outerHeight(true));
 });
 
 function setupMarginTop () {
