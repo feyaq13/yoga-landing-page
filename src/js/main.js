@@ -39,6 +39,7 @@ function initCarouselContainer (container, options) {
 }
 
 function updateCarouselPages (flkty, carouselStatus, flickityBtn) {
+  flkty.reloadCells()
   carouselStatus.textContent = `${flkty.selectedIndex + 1}/${flkty.slides.length}`;
   flickityBtn.after(carouselStatus);
 }
@@ -68,7 +69,12 @@ $(window).on('load resize', function () {
     showRegroupingCells();
   }
 
-  $teamCarousel.reloadCells();
+  updateCarouselPages(
+    $teamCarousel,
+    carouselContainers[0].querySelector('.carousel__carousel-status'),
+    carouselContainers[0].querySelector('.previous')
+  );
+
   $('.section-our-team .flickity-viewport').outerHeight($('.carousel-cell').outerHeight());
   $('.section-reviews .flickity-viewport').outerHeight($('.review').outerHeight());
 });
