@@ -538,16 +538,12 @@ button {
   background-size: contain;
   position: relative;
 
-  & .flickity-viewport {
-    margin-bottom: 50px;
+  @media (min-width: 769px) {
+    padding: 0 20px;
   }
 
-  @media (min-width: 769px) {
-    .wrapper-supportive-section-our-team {
-      max-width: 1000px;
-      margin-left: auto;
-      margin-right: auto;
-    }
+  & .flickity-viewport {
+    margin-bottom: 50px;
   }
 
   @media (min-width: 981px) {
@@ -578,8 +574,14 @@ button {
 }
 
 .wrapper-supportive-section-our-team {
-  margin: 0 20px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
   padding: 0 20px 0;
+
+  @media (max-width: 768px) {
+    max-width: 400px;
+  }
 
   @media (min-width: 980px) {
     padding-bottom: 100px;
