@@ -38,7 +38,6 @@ function initCarouselContainer (container, options) {
 }
 
 function updateCarouselPages (flkty, carouselStatus, flickityBtn) {
-  flkty.reloadCells()
   carouselStatus.textContent = `${flkty.selectedIndex + 1}/${flkty.slides.length}`;
   flickityBtn.after(carouselStatus);
 }
@@ -68,6 +67,8 @@ $(window).on('load resize', function () {
     showRegroupingCells();
   }
 
+  $teamCarousel.selectedIndex = 0
+  $teamCarousel.reloadCells()
   updateCarouselPages(
     $teamCarousel,
     carouselContainers[0].querySelector('.carousel__carousel-status'),
@@ -89,13 +90,17 @@ function setupInheritWidth () {
   child.style.maxWidth = widthParent;
 }
 
+function renamingCells (newName) {
+  Array.prototype.forEach.call(childrenSlider, function (cell) {
+    cell.classList.value = newName;
+  });
+}
+
 function showGroupingCells () {
   if (childrenSlider.length === 0) {
     childrenSlider = $('.section-our-team__carousel-team .flickity-slider').children();
   } else if ($('.carousel-cell').length !== 4) {
-    $teamCarousel.cells.forEach(function (cell) {
-      cell.element.classList.value = 'cell';
-    });
+    renamingCells('cell')
 
     const detachedChildren = $(childrenSlider.splice(0, 3)).detach();
     const cellFragment = $('<div class="carousel-cell"></div>');
@@ -108,13 +113,11 @@ function showGroupingCells () {
 
 function showRegroupingCells () {
   if ($('.carousel-cell').length !== 10) {
-    const DetachedChildren = $('.carousel-cell').children().detach();
+    const detachedChildren = $('.carousel-cell').children().detach();
     $('.carousel-cell').detach();
-    $('.section-our-team__carousel-team .flickity-slider').append(DetachedChildren);
+    $('.section-our-team__carousel-team .flickity-slider').append(detachedChildren);
 
-    $teamCarousel.cells.forEach(function (cell) {
-      cell.element.classList.value = 'carousel-cell';
-    });
+    renamingCells('carousel-cell')
 
     childrenSlider = $('.section-our-team__carousel-team .flickity-slider').children();
   }
