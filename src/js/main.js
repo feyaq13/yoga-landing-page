@@ -3,6 +3,9 @@ import { hamburgerMenu } from './hamburger';
 
 const $ = require('jquery');
 const Flickity = require('flickity');
+const Picturefill = require('picturefill')
+
+document.createElement( 'picture' );
 
 var carouselContainers = document.querySelectorAll('.carousel-container');
 

@@ -15,6 +15,7 @@
   "devDependencies": {
     "autoprefixer": "^9.6.4",
     "parcel-bundler": "^1.12.3",
+    "picturefill": "^3.0.3",
     "postcss-modules": "^1.4.1",
     "sass": "^1.23.0",
     "semistandard": "^14.2.0",
