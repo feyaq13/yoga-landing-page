@@ -1107,6 +1107,10 @@ button {
 .social-links {
   margin-bottom: 20px;
   margin-right: 20px;
+
+  & > a {
+    text-decoration: none;
+  }
 }
 
 .contacts > .contacts:first-child,
@@ -1119,9 +1123,12 @@ button {
 }
 
 .icon {
-  width: 20px;
-  height: 20px;
   margin-right: 10px;
+
+  &:hover {
+    transform: scale(1.5);
+    transition: transform .3s ease-in-out;
+  }
 }
 
 .footer__about-site {
