@@ -23,7 +23,7 @@
   },
   "dependencies": {
     "flickity": "^2.2.1",
-    "jquery": "^3.4.1"
+    "jquery": "^3.5.0"
   },
   "semistandard": {
     "ignore": [
